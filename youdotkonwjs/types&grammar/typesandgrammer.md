@@ -42,7 +42,7 @@
     * `object`
     * `symbol -- added in ES6!`
 
-｀typeof｀类型检查(好像还有一个类型检查，优于`typeof`)
+`typeof`类型检查(好像还有一个类型检查，优于`typeof`)。对于检查`null`类型的时候，返回的是`object`
 
 * `typeof`返回的是字符串
 * 只有赋值了变量才可以检查除类型，不然就是`undefined`
