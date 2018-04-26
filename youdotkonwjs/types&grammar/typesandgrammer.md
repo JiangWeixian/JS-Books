@@ -10,6 +10,7 @@
             - [2.1.1 str和array](#211-str和array)
         - [2.2 Number](#22-number)
             - [2.2.1 NaN](#221-nan)
+            - [2.2.2 void](#222-void)
             - [2.3.2 引用](#232-引用)
     - [3. CH3 - 内置函数](#3-ch3---内置函数)
         - [3.1 DATE&ERROR](#31-dateerror)
@@ -102,7 +103,7 @@ a.foobar;		// 2
 * 数值过大使用`a.toExponential()`
 * 保留几位小数，使用`a.toFixed( 0 )`
 * 指定有效位数，使用`a.toPrecision()`，类如`42.6`表示有效位数是三位
-* 要知道，所有语言中数字基本上都是粗略表示，可以用`Number.EPSILON`来判断两个数字是否差值小到可以认为相等。
+* 要知道，所有语言中数字基本上都是粗略表示，可以用`Number.EPSILON`来判断两个数字是否差值小到可以认为相等。有的时候只能在两个数字差值小于多少就认为是相等的。
 * 整数检查`Number.isInteger`
 
 #### 2.2.1 NaN
@@ -111,11 +112,34 @@ a.foobar;		// 2
 * 特性：自身不等于自身，可以用来自己创建`Number.isNaN`函数方法，或者使用`ES6`
 * `2 / 'foo'`会出现`NaN`，更多情况有待验证。
 
+#### 2.2.2 void
+
+`void`操作符。这东西不常见。含义类似跳过，如
+
+```Javascript
+var a = 42;
+
+console.log( void a, a ); // undefined 42
+```
+
+加到任何一个前面都会等于`underfined`
+
 #### 2.3.2 引用
 
 变量作为函数参数输入，有些时候会直接修改原始数值。
 
-* 输入`array`会改变原始数值
+在[js-tips](https://github.com/JiangWeixian/JS-Tips/blob/master/Grammar/JS%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E5%B7%AE%E5%BC%82.md)小小区分总结了一下。现在书里面，由进一步定义了。
+
+`number`虽然是作为值，但是`new number`是作为引用的。但是情况还是上面链接的情况，无法修改`number`，原因就是在`Javascript`中有几类数值是不允许被改变的。例如`string number`所以即使是引用，还是要做区分。
+
+* 输入`array`会改变原始数值 - 因为不是基本类型，属于复杂类型。但是仍要有细分(**什么时候是改变，什么时候是替换**)，什么时候变为引用了。
+  ```Javascript
+  var a = [1,2,3]
+  b = a
+  //此时在b上面的修改就是会改变a
+  //但是！！！如果
+  b = [4,5,6] // b 不再引用a，所以此时改变b就不会改变a
+  ```
 * 输入数字，并不会改变原始数据
 
 ## 3. CH3 - 内置函数
