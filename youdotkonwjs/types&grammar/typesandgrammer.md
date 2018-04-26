@@ -45,7 +45,12 @@
 `typeof`类型检查(好像还有一个类型检查，优于`typeof`)。对于检查`null`类型的时候，返回的是`object`
 
 * `typeof`返回的是字符串
-* 只有赋值了变量才可以检查除类型，不然就是`undefined`
+* 只有赋值了变量才可以检查除类型，不然就是`undefined`；其中还有一点问题就是，如下
+  ```Javascript
+  b // ReferenceError: b is not defined
+  typeof b // undefined 这个和没有赋值了变量的类型是一致的
+  ```
+  由于这个特性，就是可以用`typeof`来检查一些没有声明的变量，因为如果直接`if(b)`是将会报错的。
 * 对于没有声明过的变量，使用`typeof`检查还是返回`undefined`，如下所示：
     ```Javascript
     var a;
@@ -74,12 +79,19 @@ a.foobar;		// 2
 有几个**注意点：**
 
 * del `array`某个元素，却不会改变`array`长度
-* 有些东西有着数组的属性，却并不属于数组，比如说`document.getElementByClass`等返回的数据。必须通过`call`等方法让它具有`array`的方法。
+* 有些东西有着数组的属性，却并不属于数组，比如说`document.getElementByClass`等返回的数据。必须通过`call`等方法让它具有`array`的方法。类如`Array.prototype.slice.call( arguments )`
 * `ES6`有`arrat.from`估计是用来将第二点所提及的**类数组的数据**转换为**数组数据**
 
 #### 2.1.1 str和array
 
-* 有的时候， `str`和`array`十分类似。有着差不多的属性，如果字符串要用到数组的一些方法，需要借助`call`方法。
+`String`是不允许改变本身数值，而`array`是允许的。因此，如果想要借助`array`的方法来操作了`string`。有两种思路
+
+1. 将`string`转化为`array`，然后操作之后，在变为字符串
+2. 另外的就是使用`.call`来让`string`使用`array`的方法
+
+* 有的时候， `str`和`array`十分类似。有着差不多的属性，如果字符串要用到数组的一些方法，需要借助`call`方法。但是是由限制的：
+  * 如果`array`的方法是在原数组上修改的，那么使用`.call`就没有办法来操作`string`
+  * 相反的，如果是返回一个新的数组，就可以使用`.call`来操作`string`
 * 数组有一个`map`方法十分好用，值得注意（遍历数据，并进行相应的操作的）
 
 ### 2.2 Number
