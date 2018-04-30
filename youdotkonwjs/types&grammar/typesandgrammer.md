@@ -186,6 +186,7 @@ console.log( void a, a ); // undefined 42
 * `+`
 * `toString()`
 * 和`toString()`类似的有`json.stringify`. 有一些不同: 
+  * 其规则就是调用传入参数的`.toString()`方法、或者是`toJSON`
   * 从有些数值的转换结果上来看
   * `JSON.stringify`还有可选参数, 是的转换结果更可控
 
@@ -223,6 +224,14 @@ a.valueOf() //调用 42
 这样做法使得, 当通过`Number(a)`拷贝`a`的时候, 会输出`42`. 这一点类似, 如果`python`类中定义了`__str__`, 那么`print(xxx)`就会调用新定义的`__str__`方法, 而不是父类. 
 
 正如`python`中，如果你用`print`调用`class`会执行`__str__`，在`JS`中，`valueOf`和`toString`也有在不同情况下的调用(或许类似的还有`toBoolean`方法)。例如：
+
+首先这两个方法都会在类型转换的时候调用的。那么两个有什么异同。除了上面说的第一点之外，还有隐含的规则
+
+* 例如之前总结的，对于`==`可能存在强制的类型转化，而规则普遍就是`obj->str->number`。所以优先级就是`tostring`高于`tonumber`
+* 还有`+`，就意味着一个强制类型转换，目的就是转换为`number`。但是仍有限制：
+    * `+a`很明确就是把`a`类型转换为`number`
+    * `'42' + 0`，如果按照之前的逻辑，应该是`42`。可是答案是`'420'`。难道定义不准确？个人认为`tostring`优先级是高于`tonumber`
+    * `true + 1`，结果是`2`。这里就是直接`tonumber`
 
 ```Javascript
 var a = {
