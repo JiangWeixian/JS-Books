@@ -13,6 +13,7 @@
         - [3.1 Promise解释](#31-promise解释)
             - [3.1.1 创建Promise](#311-创建promise)
         - [3.2 Promise Tips](#32-promise-tips)
+        - [3.3 Promise warns](#33-promise-warns)
     - [4. CH4 - 生成器/迭代器](#4-ch4---生成器迭代器)
         - [4.1 初步使用生成器](#41-初步使用生成器)
             - [4.1.1 SomeTips](#411-sometips)
@@ -85,7 +86,7 @@ doF();
 
 `ES6`的`Promise`
 
-* 解决第三方信任问题 - 自我设定了`fail`和`success`该怎么办。
+* 解决第三方信任问题 - 自我设定了`fail`和`success`该怎么办。而不是让所有问题都在同一个回掉中处理。
 * 以及更加简介，不容易后多个回调导致**代码不易阅读**
 
 ## 3. CH3 - Promise
@@ -147,10 +148,40 @@ getJSON("/posts.json").then(function(json) {
 
 ### 3.2 Promise Tips
 
-* `Promise.all` - 传递的是函数名数组
-* 链式使用`Promise`，方法就是`function`中返回一个`new Promise`然后就可以在外部`.then`链式调用了。
-* 还有其他方法，例如`.then/.resolve/.reject`
+* `Promise.all` - 传递的不仅仅只是`promise`的函数
+* 链式使用`Promise`，方法就是`function`中返回一个`new Promise`或者`return Promise.solve`，然后就可以在外部`.then`链式调用了。**通过new promise方法继续一个promise，resolve不传递参数也是可以使用的**
+* 还有其他方法，例如`.then/.resolve/.reject/.finaly/.race`
+  * `finaly`类似`try catch`无论如何都会被调用。但是同样也可以在其后使用`then`
+  * `race`只要有其中一个完成了就接下去传递
 * 还有一个`.async`值得看一看
+
+### 3.3 Promise warns
+
+* `Promise`会吞掉所有的`error`，也就是说如果在`resolve`状态发生的`error`是不会被`reject`捕获的。
+  * 如果在`Promise`外面加上`try catch`是否可以捕获异常。应该是不可以的，因为一个是同步一个是异步。除非在`Promise`下使用。
+* `Promise`只能够被单次解析，一个`Promise`只能够被调用一次。除非创建函数`a`，函数作用就是在被调用的时候返回一个新的`promise`  
+* 目前还没有`map`方法 - 只能够自己实现
+  ```Javascript
+  if (!Promise.map) {
+	Promise.map = function(vals,cb) {
+		// 一个等待所有被映射的promise的新promise
+		return Promise.all(
+			// 注意：普通的数组`map(..)`，
+			// 将值的数组变为promise的数组
+			vals.map( function(val){
+				// 将`val`替换为一个在`val`
+				// 异步映射完成后才解析的新promise
+				return new Promise( function(resolve){
+					cb( val, resolve );
+				} );
+			} )
+		);
+	};
+  }
+  ```
+  这里有一个很关键的一点就是`cb`，这个决定了这是一个异步的方法。能够实现**在迭代完成之前**每次迭代都调用，类似`gernerator`。
+  能解决**使用一个循环，每次循环进行一些操作(可能是promise)。在循环结束之后把值传递下去。**
+* `Promise`没办法被外部打断
 
 ## 4. CH4 - 生成器/迭代器
 
