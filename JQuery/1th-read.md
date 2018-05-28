@@ -8,6 +8,7 @@
     - [Deep in Deep](#deep-in-deep)
         - [New+Prototype](#newprototype)
     - [DOM](#dom)
+    - [Reg](#reg)
     - [Function](#function)
         - [$.extend](#extend)
         - [$.uniqueSort](#uniquesort)
@@ -64,7 +65,11 @@ JS原理、定义部分踩坑。
     如果是节点A和节点B是包含关系，那么A和B的关系又是包含关系，A又在B节点之前，那么该函数返回的数字为`000100+010000`。
 *  `DOMElement.contains(DOMNode)` - 就如同函数名字那样，可以检验是否有包含关系。不过从返回的结果上看，`compareDocumentPosition`显然要更强大一点。
 
+## Reg
 
+主要是对选择器的匹配。[MDN参考地址](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+
+* `^`在`[]`代表开始，在内部表示非(除了什么什么之外)
 
 ## Function
 
