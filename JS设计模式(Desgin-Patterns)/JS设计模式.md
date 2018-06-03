@@ -4,3 +4,4 @@
   * **节流&分时&预编译函数**以及闭包需要阅读
 * 设计模式主体 / 介绍各种设计模式  
   1. [单例模式](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F(Desgin-Patterns)/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.md) 
+  2. [策略模式]()
