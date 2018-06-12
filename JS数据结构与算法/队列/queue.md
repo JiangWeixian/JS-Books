@@ -1,7 +1,9 @@
 # 队列 - Queue
 > FIFO
 
-## 前置知识 - JavaScript和Stack
+## Queue
+
+### 前置知识 - JavaScript和Stack
 
 首先要知道`Queue`基本特点：
 
@@ -12,7 +14,7 @@
 
 以上几点和[Stack](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%A0%88/stack.md)很像。
 
-## 前置知识 - 内置函数
+### 前置知识 - 内置函数
 
 * `enqueue`
 * `dequeue`
@@ -21,6 +23,18 @@
 * `size`
 
 基本框架和[Stack](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%A0%88/stack.md)类似。
+
+
+## Queue应用 - 优先队列
+
+* 不是严格意义上FIFO - 如果后面来的优先级别较高，就先插到前面。
+* 优先级需要自己定义，因此插入的元素也是自己定义。包含`value&prior`，如：
+    ```JavaScript
+    {
+      value
+      prior
+    }
+    ```
 
 ## 实现它
 
