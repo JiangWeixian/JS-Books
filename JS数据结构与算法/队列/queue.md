@@ -39,8 +39,14 @@
 
 而相关内置函数和`Queue`一样。不过由于`prior`存在，`dequeue`会和传统的不一样。
 
+## Queue应用 - 循环队列
+
+`Queue`并没有元素之间联系，不像[链表]()每个元素都有指向下一个元素的指针。
+
+所以循环队列的实现需要通过特别的技巧，比如说：**dequeue同时enqueue元素就可以了。**如`queue.enqueue(queue.dequeue())`。不过个人觉得是有使用限制的。
+
 ## 实现它
 
 1. [queue.js](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%98%9F%E5%88%97/queue.js)
 
-2. [priorqueue.js]()
+2. [priorqueue.js](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%98%9F%E5%88%97/priorQueue.js)
