@@ -30,12 +30,17 @@
 * 不是严格意义上FIFO - 如果后面来的优先级别较高，就先插到前面。
 * 优先级需要自己定义，因此插入的元素也是自己定义。包含`value&prior`，如：
     ```JavaScript
-    {
+    function item = ()=> {
       value
       prior
     }
     ```
+  这里定义`prior`比较小的优先级比较高。
+
+而相关内置函数和`Queue`一样。不过由于`prior`存在，`dequeue`会和传统的不一样。
 
 ## 实现它
 
-[queue.js](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%98%9F%E5%88%97/queue.js)
+1. [queue.js](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%98%9F%E5%88%97/queue.js)
+
+2. [priorqueue.js]()
