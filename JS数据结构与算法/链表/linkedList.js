@@ -92,7 +92,7 @@ function LinkedList () {
       current = current.next
       index += 1
     }
-    return index >= length ? -1 : index
+    return -1
   }
   this.isEmpty = ()=> {
     return length === 0

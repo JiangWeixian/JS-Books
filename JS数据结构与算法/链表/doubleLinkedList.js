@@ -38,10 +38,12 @@ function DoubleLinkedList () {
         return true
       }
       if (pos === length) {
+        // insert tail
         current = tail
         item.next = current.next
         current.next = item
         item.prev = current
+        tail = item
         length += 1
         return true
       }
@@ -63,7 +65,8 @@ function DoubleLinkedList () {
   this.removeAt = (pos)=> {
     if (pos >= 0 && pos < length) {
       let current = head,
-      index = 0
+        previous = null,
+        index = 0
       if (pos === 0) {
         head = current.next
         head.prev = null
@@ -77,33 +80,42 @@ function DoubleLinkedList () {
         length -= 1
         return current.element
       }
-      while (current && index < pos - 1) {
+      while (current && index < pos) {
+        previous = current
         current = current.next
         index += 1
       }
-      if (index === pos - 1) {
-        let element = current.next.element
-        current.next = current.next.next
-        length -= 1
-        return element
-      }
+      previous.next = current.next
+      current.next.prev = previous
+      length -= 1
+      return current.element
     }
     return false
   }
   this.remove = (element)=> {
-    let current = head
+    let current = head,
+      previous = null
     if (head.element === element) {
       head = current.next
+      head.prev = null
       length -= 1
       return element
     }
     while (current.next) {
-      if (current.next.element === element) {
-        current.next = current.next.next
+      previous = current
+      current = current.next
+      if (current.next === null) {
+        tail = previous
+        previous.next = current.next
         length -= 1
         return element
       }
-      current = current.next
+      if (current.element === element) {
+        previous.next = current.next
+        current.next.prev = previous
+        length -= 1
+        return element
+      }
     }
     return false
   }
@@ -117,7 +129,7 @@ function DoubleLinkedList () {
       current = current.next
       index += 1
     }
-    return index >= length ? -1 : index
+    return -1
   }
   this.isEmpty = ()=> {
     return length === 0
@@ -175,3 +187,30 @@ linkedList.insert(4, 'pos=tail')
 linkedList.print()
 console.log('反方向遍历')
 linkedList.reprint()
+console.log('超过了链表长度')
+linkedList.insert(7, 'pos=tail')
+linkedList.print()
+console.log('删除头部节点')
+linkedList.removeAt(0)
+linkedList.print()
+console.log('删除中间节点')
+linkedList.removeAt(1)
+linkedList.print()
+console.log('删除尾部节点')
+linkedList.removeAt(2)
+linkedList.print()
+console.log('插入')
+linkedList.insert(0, 'pos=0')
+linkedList.insert(2, 'pos=mid')
+linkedList.insert(4, 'pos=tail')
+console.log('toString')
+console.log(linkedList.toString())
+console.log('删除pos=0')
+linkedList.remove('pos=0')
+linkedList.print()
+console.log('删除pos=tail')
+linkedList.remove('pos=tail')
+linkedList.print()
+console.log('删除pos=mid')
+linkedList.remove('pos=mid')
+linkedList.print()
