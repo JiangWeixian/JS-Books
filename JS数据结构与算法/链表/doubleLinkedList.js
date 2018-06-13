@@ -140,6 +140,9 @@ function DoubleLinkedList () {
   this.getHead = ()=> {
     return head
   }
+  this.getTail = ()=> {
+    return tail
+  }
   this.toString = ()=> {
     let current = head,
       str = ''
@@ -214,3 +217,6 @@ linkedList.print()
 console.log('删除pos=mid')
 linkedList.remove('pos=mid')
 linkedList.print()
+console.log('查找元素')
+console.log(linkedList.indexOf(0))
+console.log(linkedList.indexOf('pos=0'))
