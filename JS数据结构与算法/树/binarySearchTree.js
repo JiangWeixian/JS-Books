@@ -6,22 +6,17 @@ function BinarySearchTree () {
     this.rigth = null
   }
   let insertNode = function(node, value) {
-    if (node.value > value) {
-      if (node.left) {
-        return insertNode(node.left, value)
-      } else {
-        node.left = new Node(value)
-        return true
-      }
+    if (!node) {
+      return new Node(value)
     } else {
-      if (node.right) {
-        return insertNode(node.right, value)
-      } else {
-        node.right = new Node(value)
-        return true
+      if (node.value > value) {
+        node.left = insertNode(node.left, value)
+        return node
+      } else if (node.value < value) {
+        node.right = insertNode(node.right, value)
+        return node
       }
     }
-    return false
   }
   let inOrder = function(node, callback) {
     if (node.left) {
@@ -145,6 +140,22 @@ function BinarySearchTree () {
   this.postOrderTraverse = (callback)=> {
     postOrder(root, callback)
   }
+  this.deepOrderTraverse = (callback)=> {
+    preOrder(root, callback)
+  }
+  this.breadOrderTraverse = (callback)=> {
+    let queue = [root]
+    while (queue.length) {
+      let current = queue.shift()
+      callback(current.value)
+      if (current.left) {
+        queue.push(current.left)
+      }
+      if (current.right) {
+        queue.push(current.right)
+      }
+    }
+  }
   this.min = ()=> {
     return findMinValue(root)
   }
@@ -157,6 +168,7 @@ function BinarySearchTree () {
 }
 
 let bst = new BinarySearchTree()
+bst.insert(11)
 bst.insert(7)
 bst.insert(15)
 bst.insert(5)
@@ -171,11 +183,11 @@ bst.insert(20)
 bst.insert(18)
 bst.insert(25)
 bst.insert(6)
-console.log('前序列遍历')
+console.log('中序列遍历')
 bst.inOrderTraverse(function (value) {
   console.log(value)
 })
-console.log('中间序列遍历')
+console.log('前序列遍历')
 let arr = []
 bst.preOrderTraverse(function (value) {
   arr.push(value)
@@ -183,6 +195,10 @@ bst.preOrderTraverse(function (value) {
 console.log(arr)
 console.log('后序列遍历')
 bst.postOrderTraverse(function (value) {
+  console.log(value)
+})
+console.log('广度优先遍历')
+bst.breadOrderTraverse(function (value) {
   console.log(value)
 })
 console.log('最小值')
