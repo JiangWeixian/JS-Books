@@ -8,6 +8,16 @@ function Graph () {
     })
     return state
   }
+  let dfs = function (v, color, callback) {
+    callback(v)
+    adjList[v].forEach((w)=> {
+      if (color[w] === 'white') {
+        color[w] = 'grey'
+        dfs(w, color, callback)
+      }
+    })
+    color[w] = 'black'
+  }
   this.addVertex = (v)=> {
     vertices.push(v)
     adjList[v] = []
@@ -77,6 +87,12 @@ function Graph () {
         callback(path[e])
       }
     }
+  }
+  this.deepOrder = (callback) => {
+    let state = visitState()
+    vertices.forEach((v)=> {
+      dfs(v, state, callback)
+    })
   }
 }
 
