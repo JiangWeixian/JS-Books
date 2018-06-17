@@ -16,7 +16,7 @@ function Graph () {
         dfs(w, color, callback)
       }
     })
-    color[w] = 'black'
+    color[v] = 'black'
   }
   this.addVertex = (v)=> {
     vertices.push(v)
@@ -91,7 +91,9 @@ function Graph () {
   this.deepOrder = (callback) => {
     let state = visitState()
     vertices.forEach((v)=> {
-      dfs(v, state, callback)
+      if (state[v] === 'white') {
+        dfs(v, state, callback)        
+      }
     })
   }
 }
@@ -121,4 +123,8 @@ graph.BreadthOrder('Z', function (value) {
 console.log('最短路径')
 graph.findMinPath('A')(function (path) {
   console.log('A-' + path.reverse().join('-'))
+})
+console.log('深度优先')
+graph.deepOrder(function (value) {
+  console.log(value)
 })
