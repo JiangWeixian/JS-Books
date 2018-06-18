@@ -29,6 +29,9 @@ let splitPart = function (arr, left, right) {
         arr[i] = arr[j]
         arr[j] = tmp
         // 理解一下下面两行代码
+        //  下面倆个代码补充上面两个while循环工作
+        //  因为找到比privot大的元素下标以及，比privot小的元素下标之后。
+        // 上面两个循环被停止了，需要重新i++和j--来重新开启上面两个循环
         i += 1
         j -= 1
       }
