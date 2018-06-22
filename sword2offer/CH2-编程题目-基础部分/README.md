@@ -10,6 +10,7 @@
     - [替换字符串空格](#替换字符串空格)
     - [从尾开始输出链表](#从尾开始输出链表)
     - [两个堆栈实现队列](#两个堆栈实现队列)
+    - [旋转数组最小数字 / 以下为算法和数据结构](#旋转数组最小数字--以下为算法和数据结构)
 
 <!-- /TOC -->
 
@@ -122,3 +123,30 @@
 
 * [ES5-combileStacks2Queue.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/combineStacks2Queue.js)
 * [ES6-combileStacks2Queue.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/combineStacks2Queue.js)
+
+### 旋转数组最小数字 / 以下为算法和数据结构
+
+和搜索有关算法见[地址](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/quickFind.js)
+
+题目解析详细为：
+
+![旋转数组]()
+
+关键在于要明白旋转数组的特性：
+
+1. 前后是两个递增子序列
+2. **最小数字在两个子序列边界**
+
+**两种思路**
+
+1. 找到第一个下降的数字就是最小数字，这样的复杂度是`O(n)`
+2. 通过二分法(在数组中不存在相等数字的时候适用)，复杂度是`O(logn) or O(n)`。因为需要额外处理全是相等数字的情况
+
+**Python**
+
+* [Python-quickFindInCircle.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/Python/quickFindInCircle.py)
+
+**Javascript**
+
+* [ES5-quickFindInCircle.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/quickFindInCircleArr.js)
+* [ES6-quickFindInCircle.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/quickFindInCircleArr.js)
