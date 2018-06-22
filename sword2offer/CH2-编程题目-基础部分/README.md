@@ -73,10 +73,10 @@
 
 **python**
 
-* [Python-repalceSpace.py]()
+* [Python-repalceSpace.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/Python/replaceSpace.py)
 
 **JavaScript**
 
-* [ES5-repalceSpace.js]()
-* [ES6-repalceSpace.js]()
+* [ES5-repalceSpace.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/repalceSpace.js)
+* [ES6-repalceSpace.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/repalceSpace.js)
 
