@@ -12,6 +12,7 @@
     - [两个堆栈实现队列](#两个堆栈实现队列)
     - [旋转数组最小数字 / 以下为算法和数据结构](#旋转数组最小数字--以下为算法和数据结构)
     - [台阶策略](#台阶策略)
+    - [统计2进制中1出现次数](#统计2进制中1出现次数)
 
 <!-- /TOC -->
 
@@ -176,3 +177,28 @@
 
 * [ES5-jumpSteps.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/jumpSteps.js)
 * [ES6-jumpSteps.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/jumpSteps.js)
+
+### 统计2进制中1出现次数
+
+书中使用的是位运算的方法，当然不仅仅只有这一种方法。
+
+需要知道位运算的几种情况，如下
+
+![位运算]()
+
+不同语言基本类似。
+
+但是我并没有用它的方式...
+
+**Python**
+
+[不同进制之间如何转换](https://blog.csdn.net/SeeTheWorld518/article/details/47752925)。
+
+* [Python-countOneInBinary.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/Python/countOneInBinary.py)
+
+**JavaScript**
+
+[不同进制之间转换]()
+
+* [ES5-countOneInBinary.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/countOneInBinary.js)
+* [ES6-countOneInBinary.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/countOneInBinary.js)
