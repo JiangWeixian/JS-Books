@@ -184,7 +184,7 @@
 
 需要知道位运算的几种情况，如下
 
-![位运算]()
+![位运算](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/img/%E4%BD%8D%E8%BF%90%E7%AE%97.png)
 
 不同语言基本类似。
 
