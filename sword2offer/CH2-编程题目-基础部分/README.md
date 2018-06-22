@@ -130,7 +130,7 @@
 
 题目解析详细为：
 
-![旋转数组]()
+![旋转数组](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/img/ciclearr.png)
 
 关键在于要明白旋转数组的特性：
 
