@@ -8,6 +8,7 @@
     - [实现Singleton模式](#实现singleton模式)
     - [二维数组查找 / 以下几个题目和数据结构有关](#二维数组查找--以下几个题目和数据结构有关)
     - [替换字符串空格](#替换字符串空格)
+    - [从尾开始输出链表](#从尾开始输出链表)
 
 <!-- /TOC -->
 
@@ -80,3 +81,21 @@
 * [ES5-repalceSpace.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/repalceSpace.js)
 * [ES6-repalceSpace.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/repalceSpace.js)
 
+### 从尾开始输出链表
+
+[链表](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/%E9%93%BE%E8%A1%A8.md)是含有头指针的。
+
+如果想要从尾部开始输入，一个直观的想法是，保存所有数据，然后利用[堆栈](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%A0%88/stack.md)的特性**FILO**来达到目的。
+
+不过还有一个比较特别的思路是：
+
+既然想要最后一个先输出，那么递归的思想是先处理**最后一个元素或者最小单元**就能够达到目的。
+
+**Python**
+
+* [Python-linkedListT2B.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/Python/searchMatrix.py)
+
+**JavaScript**
+
+* [ES5-linkedListT2B.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/linkedListT2B.js)
+* [ES6-linkedListT2B.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/linkedListT2B.js)
