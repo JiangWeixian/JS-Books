@@ -11,6 +11,7 @@
     - [从尾开始输出链表](#从尾开始输出链表)
     - [两个堆栈实现队列](#两个堆栈实现队列)
     - [旋转数组最小数字 / 以下为算法和数据结构](#旋转数组最小数字--以下为算法和数据结构)
+    - [台阶策略](#台阶策略)
 
 <!-- /TOC -->
 
@@ -150,3 +151,28 @@
 
 * [ES5-quickFindInCircle.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/quickFindInCircleArr.js)
 * [ES6-quickFindInCircle.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/quickFindInCircleArr.js)
+
+### 台阶策略
+
+一个要跳上`n`个台阶，可以跳`1 or 2`。用算法求解一共可以跳多少种可能。
+
+这典型的动态规划问题：
+
+1. 先找到`n = 1 or 2`这些低台阶数目的各种可能，假设分别是`f(1) or f(2)`
+2. 那么`n=3`的可能台阶数目就是`1 + f(2)`加上`2 + f(1)`(就这个题目而言)
+3. 依次类推
+
+优化算法可以使用`cached`。就是利用`cached`保存`n = 1 or 2...n-1`的计算结果。
+
+然后等到下次需要`n=k`的时候，直接利用`cached`中已经计算得到的结果。
+
+即使使用这种方式(如果我算法没有错误的话)，如果台阶数目过多，还是没有办法，还是溢出了。
+
+**Python**
+
+* [Python-jumpSteps.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/Python/jumpSteps.py)
+
+**JavaScript**
+
+* [ES5-jumpSteps.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/jumpSteps.js)
+* [ES6-jumpSteps.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/jumpSteps.js)
