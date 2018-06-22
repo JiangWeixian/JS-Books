@@ -105,7 +105,7 @@
 
 通过两个堆栈实现队列。
 
-[堆栈]()和[队列]()关键在于数据出入循序不同。
+[堆栈](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%A0%88/stack.md)和[队列](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%98%9F%E5%88%97/queue.md)关键在于数据出入循序不同。
 
 而在`Python`和`JavaScript`中数组本身就可以既可以是堆栈或者队列。而这个题目目的就在于**限制默认数组行为，使得它只能够通过堆栈的行为操作数据，例如`push and pop`**，然后在此基础上实现**队列**
 
