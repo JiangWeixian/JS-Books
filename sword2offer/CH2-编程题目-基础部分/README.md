@@ -198,7 +198,7 @@
 
 **JavaScript**
 
-[不同进制之间转换]()
+[不同进制之间转换](https://github.com/JiangWeixian/JS-Tips/blob/master/Grammar/JS-%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.md)
 
 * [ES5-countOneInBinary.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/countOneInBinary.js)
 * [ES6-countOneInBinary.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/countOneInBinary.js)
