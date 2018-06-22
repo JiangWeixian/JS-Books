@@ -9,6 +9,7 @@
     - [二维数组查找 / 以下几个题目和数据结构有关](#二维数组查找--以下几个题目和数据结构有关)
     - [替换字符串空格](#替换字符串空格)
     - [从尾开始输出链表](#从尾开始输出链表)
+    - [两个堆栈实现队列](#两个堆栈实现队列)
 
 <!-- /TOC -->
 
@@ -99,3 +100,25 @@
 
 * [ES5-linkedListT2B.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/linkedListT2B.js)
 * [ES6-linkedListT2B.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/linkedListT2B.js)
+
+### 两个堆栈实现队列
+
+通过两个堆栈实现队列。
+
+[堆栈]()和[队列]()关键在于数据出入循序不同。
+
+而在`Python`和`JavaScript`中数组本身就可以既可以是堆栈或者队列。而这个题目目的就在于**限制默认数组行为，使得它只能够通过堆栈的行为操作数据，例如`push and pop`**，然后在此基础上实现**队列**
+
+关键点：
+
+1. 构造堆栈
+2. 一个堆栈控制入，另外一个堆栈控制出
+
+**Python**
+
+* [Python-combileStacks2Queue.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/Python/combineStacks2Queue.py)
+
+**JavaScript**
+
+* [ES5-combileStacks2Queue.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/combineStacks2Queue.js)
+* [ES6-combileStacks2Queue.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/combineStacks2Queue.js)
