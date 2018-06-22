@@ -7,6 +7,7 @@
     - [~~赋值运算符~~](#赋值运算符)
     - [实现Singleton模式](#实现singleton模式)
     - [二维数组查找 / 以下几个题目和数据结构有关](#二维数组查找--以下几个题目和数据结构有关)
+    - [替换字符串空格](#替换字符串空格)
 
 <!-- /TOC -->
 
@@ -38,12 +39,12 @@
 
 关键在于这个二维数组特殊，里面的数据是已经排序好了的。
 
-![题目描述]()
+![题目描述](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/img/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE.png)
 
 类似**二分搜索的快速算法很合适**缩小访范围的思路，具体可见
 
-* [分析]() 
-* [实现]()
+* [分析](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.md) 
+* [实现](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%83%A8%E5%88%86/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/quickFind.js)
 
 但是并不直接能够使用。由于数据格式问题，但是这种算法的关键在于，**大或者小的方向只有一个**：
 
@@ -63,3 +64,19 @@
 
 * [ES5-searchmatrix.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES5/searchMatrix.js)
 * [ES6-searchmatrix.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH2-%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/ES6/searchMatrix.js)
+
+### 替换字符串空格
+
+书中所使用的方法无论从哪个角度来说，都不是很适用`JavaScript or python`。
+
+本身的方法就是`O(n)`复杂度的算法。
+
+**python**
+
+* [Python-repalceSpace.py]()
+
+**JavaScript**
+
+* [ES5-repalceSpace.js]()
+* [ES6-repalceSpace.js]()
+
