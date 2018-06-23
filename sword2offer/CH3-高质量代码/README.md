@@ -1,9 +1,26 @@
 # CH3-高质量代码
 
+<!-- TOC -->
+
+- [CH3-高质量代码](#ch3-高质量代码)
+  - [高质量](#高质量)
+    - [Tips](#tips)
+    - [数的次幂](#数的次幂)
+    - [打印出一串数字](#打印出一串数字)
+    - [O(1)方式删除某个节点](#o1方式删除某个节点)
+    - [调整数组使得奇数在偶数前面](#调整数组使得奇数在偶数前面)
+    - [链表到数K节点](#链表到数k节点)
+
+<!-- /TOC -->
+
 ## 高质量
 
 * 边界测试
 * 错误输入情况
+
+### Tips
+
+1. 借助两个指针是一个比较好的方法
 
 ### 数的次幂
 
@@ -70,3 +87,22 @@
 
 * [ES5-exchangeOdd.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES5/exchangeOdd.js)
 * [ES6-exchangeOdd.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES6/exchangeOdd.js)
+
+### 链表到数K节点
+
+这个问题在于，**如果不知道链表长度**，那么想要直到链表倒数就要先获取长度之后然后再进行查找。这是第一种方法。
+
+还有一种方法是借助两个指针(对不起，我看答案了。)
+
+一个指针指向开头，另一个距离第一个**k个位置。**当后面那个达到末尾的时候，前一个就是到数第到数k个。
+
+在链表长度比较长的情况下，提升比较明显。
+
+**Python**
+
+* [Python-linkListLastK.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/Python/linkListLastK.py)
+
+**JavaScript**
+
+* [ES5-linkListLastK.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES5/linkedListLastK.js)
+* [ES6-linkListLastK.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES6/linkedListLastK.js)
