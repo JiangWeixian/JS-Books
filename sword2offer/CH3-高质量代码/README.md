@@ -11,6 +11,7 @@
     - [调整数组使得奇数在偶数前面](#调整数组使得奇数在偶数前面)
     - [链表到数K节点](#链表到数k节点)
     - [合并两个链表](#合并两个链表)
+    - [判断子树](#判断子树)
 
 <!-- /TOC -->
 
@@ -126,3 +127,30 @@
 
 * [ES5-mergeLinkedList](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES5/mergeLinkedList.js)
 * [ES6-mergeLinkedList](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES6/mergeLinkedList.js)
+
+### 判断子树
+
+假设判断`A`是否包含`B`。如果要成立，至少`A`是大于`B`。
+
+文中用了两个递归。
+
+1. 第一个寻找相同的根节点(相对于`B`来说) - 因为如果节点不相同，就要继续在`A`中寻找。节点相等就进入第二个步骤。
+2. 然后在第一个基础上寻找是否有相同的结构 - 要以`B`为准，**`B`到达了边界代表相等**。如果不相等(树结构是否相等)就回到第一步。
+
+关键是第二个递归比较难以理解，树结构是否相等条件为：
+
+1. `B`先到达边界就为真
+2. `A`先到达边界就为假
+
+**注意递归是将问题简化为原子的算法，如果原子中有一个为假，那么整个递归式子就应该为假。**
+
+**树的递归特点在于，需要递归左边和右边。**
+
+**Python**
+
+* [Python-findTreeB.py]()
+
+**JavaScript**
+
+* [ES5-findTreeB.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES5/findTreeB.js)
+* [ES6-findTreeB.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES6/findTreeB.js)
