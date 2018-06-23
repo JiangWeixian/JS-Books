@@ -120,5 +120,9 @@
 
 **Python**
 
+* [Python-mergeLinkedList](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/Python/mergeLinkedList.py)
 
 **JavaScript**
+
+* [ES5-mergeLinkedList](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES5/mergeLinkedList.js)
+* [ES6-mergeLinkedList](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES6/mergeLinkedList.js)
