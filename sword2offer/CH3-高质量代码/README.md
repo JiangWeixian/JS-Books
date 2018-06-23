@@ -40,3 +40,33 @@
 
 * [ES5-printNumsRange.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES5/printNumRange.js)
 * [ES6-printNumsRange.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES6/printNumRange.js)
+
+### O(1)方式删除某个节点
+
+文中的条件是，传递的是删除的节点。通过传递节点来达到删除的目的。
+
+但是问题在于一般来说，都是传入删除节点的`value`，寻找各个节点，然后再删除这个节点。
+
+所以我觉得`O(1)`方式只在某个条件下成立。
+
+不先实现了。
+
+### 调整数组使得奇数在偶数前面
+
+对于`Python or JavaScript`来说，可以通过内置函数实现`O(n)`算法(**以空间换时间**)
+
+如果不通过这样方式。
+
+设置两个指针，一个在前(start)，一个在后(end)。
+
+1. 如果后面的的遇到偶数，前面为奇数。就交换
+2. 直到start在end之后
+
+**Python**
+
+* [Python-exchangeOdd.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/Python/exchangeOdd.py)
+
+**JavaScript**
+
+* [ES5-exchangeOdd.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES5/exchangeOdd.js)
+* [ES6-exchangeOdd.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES6/exchangeOdd.js)
