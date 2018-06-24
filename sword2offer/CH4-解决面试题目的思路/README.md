@@ -45,5 +45,17 @@
 * [ES5-matrixInCircle.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/matrixInCicle.js)
 * [ES6-matrixInCircle.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/matrixInCicle.js)
 
+### 得到堆栈min元素
 
+关键在于得到`min`的元素复杂度是`O(1)`. 很明显需要在每次`push or pop`的时候更新`min`.
 
+甚至可以创建`min`元素的堆栈. 在每次`push or pop`的时候同步更新`min`. 典型的**空间换时间.**
+
+**Python**
+
+* [Python-minStack.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/Python/minStack.py)
+
+**JavaScript**
+
+* [ES5-minStack.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/minStack.js)
+* [ES6-minStack.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/minStack.js)
