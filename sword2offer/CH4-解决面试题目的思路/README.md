@@ -26,3 +26,22 @@
 
 * [ES5-mirrorTree.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/mirrorTree.js)
 * [ES6-mirrorTree.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/mirrorTree.js)
+
+### 顺时针打印矩阵
+
+需要考虑如果矩阵不规则不是正方形,情况比较复杂.将问题分解为两个步骤.
+
+1. 分解矩形 - 当打印完成一圈之后,进行内圈的打印
+2. 打印 - **针对打印一圈的情况,需要正方方向一行,上下方向一列.**
+
+**Python**
+
+* [Python-matrixInCircle.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/Python/matrixInCircle.py)
+
+**JavaScript**
+
+* [ES5-matrixInCircle.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/matrixInCicle.js)
+* [ES6-matrixInCircle.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/matrixInCicle.js)
+
+
+
