@@ -92,3 +92,16 @@
 * [ES5-checkStack.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/checkStack.js)
 * [ES6-checkStack.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/checkStack.js)
 
+### 从上往下从左往右边打印二叉树
+
+典型的就是`BFS`
+
+**Python**
+
+* [Python-bfs.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/Python/bfs.py)
+
+**JavaScript**
+
+* [ES5-bfs.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/bfs.js)
+* [ES6-bfs.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/bfs.js)
+
