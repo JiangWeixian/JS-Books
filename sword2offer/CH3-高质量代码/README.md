@@ -152,5 +152,7 @@
 
 **JavaScript**
 
+对于树，试着使用`class`关键字创建。对于私有方法和私有属性，并没有想`function`那么好用。
+
 * [ES5-findTreeB.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES5/findTreeB.js)
 * [ES6-findTreeB.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES6/findTreeB.js)
