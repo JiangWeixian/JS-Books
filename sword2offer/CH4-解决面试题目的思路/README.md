@@ -10,7 +10,7 @@
 
 大致意思如图。
 
-![树的镜像]()
+![树的镜像](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/sword2offer/CH4-%E8%A7%A3%E5%86%B3%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE%E7%9A%84%E6%80%9D%E8%B7%AF/img/%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F.png)
 
 同样这也是比较适合递归的方法：
 
