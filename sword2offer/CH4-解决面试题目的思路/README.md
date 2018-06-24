@@ -59,3 +59,36 @@
 
 * [ES5-minStack.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/minStack.js)
 * [ES6-minStack.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/minStack.js)
+
+### 堆栈的压入和弹出序列
+
+根据两个序列, 分别为弹出和压入. 检测是不是其中压入和弹出是否一一对应.
+
+**为什么会有这样的检测?**
+
+因为堆栈来说, 我们压入`[1, 2, 3, 4]`然后弹出`4`,**然后再压入`[5]`**,然后弹出`[1, 2, 3]`
+
+可以得到弹出序列为`[4, 5, 3, 2, 1]`但是没有就弹出得到压入的情况. 因为有可能直接压入`[1, 2, 3, 4, 5]`**对应多种弹出情况**
+
+就是这种一对多的关系,才使得我们需要检测.
+
+**思路**
+
+1. 首先压入顺序是明确的, 因为一对多关系中,**一是压入关系,而多是弹出关系**
+
+因此我们首先建立**辅助堆栈**
+
+1. 所以我们通过压入的顺序来压入元素到**辅助堆栈**, 然后**如果压入之后,辅助堆栈的栈顶元素正好是弹出顺序中第一个,那么我们就弹出**
+2. 当辅助堆栈为空的时候,其实就是**满足了对应关系**
+
+**Python**
+
+* [Python-checkStack.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/Python/checkStack.py)
+
+**JavaScript**
+
+注意`shift`修改了数组元素, 因此需要重新创建.
+
+* [ES5-checkStack.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/checkStack.js)
+* [ES6-checkStack.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/checkStack.js)
+
