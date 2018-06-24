@@ -36,6 +36,8 @@
 
 **Python**
 
+函数也可以作为参数传递.
+
 * [Python-matrixInCircle.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/Python/matrixInCircle.py)
 
 **JavaScript**
