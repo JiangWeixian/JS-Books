@@ -10,6 +10,7 @@
     - [堆栈的压入和弹出序列](#堆栈的压入和弹出序列)
     - [从上往下从左往右边打印二叉树](#从上往下从左往右边打印二叉树)
     - [二叉搜索树的后续遍历](#二叉搜索树的后续遍历)
+    - [二叉树中和为某数值的路径](#二叉树中和为某数值的路径)
 
 <!-- /TOC -->
 
@@ -138,3 +139,24 @@
 
 * [ES5-checkBST.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/checkBST.js)
 * [ES6-checkBST.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/checkBST.js)
+
+### 二叉树中和为某数值的路径
+
+其实这里应该设了个陷阱，将[**图**]()中问题带到了树结构中。
+
+类似图的深度遍历，想要求解这个问题，我们需要解决：
+
+1. 在递归中传递上一步路径，以及上一步累加和
+2. 同时采用的遍历方式应该是深度遍历
+3. 如果数值和达到了目标，那么就保存，**甚至可以直接停止？在树中数值为正的情况下..**
+
+**注意不要以传统的树深度遍历方式求解。因为我们需要对于`left and right`输入的`lastPath`是同样的。**
+
+**Python**
+
+* [Python-findPath.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/Python/findPath.py)
+
+**JavaScript**
+
+* [ES5-findPath.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/findPath.js)
+* [ES6-findPath.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/findPath.js)
