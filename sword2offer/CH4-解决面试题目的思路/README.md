@@ -5,10 +5,11 @@
 - [CH4- 解决面试题的思路](#ch4--解决面试题的思路)
   - [解决思路](#解决思路)
     - [二叉树镜像](#二叉树镜像)
-    - [顺时针打印矩阵](#顺时针打印矩阵)
-    - [得到堆栈min元素](#得到堆栈min元素)
+    - [顺时针打印矩阵 / 画图具象问题](#顺时针打印矩阵--画图具象问题)
+    - [得到堆栈min元素 / 举例具象问题](#得到堆栈min元素--举例具象问题)
     - [堆栈的压入和弹出序列](#堆栈的压入和弹出序列)
     - [从上往下从左往右边打印二叉树](#从上往下从左往右边打印二叉树)
+    - [二叉搜索树的后续遍历](#二叉搜索树的后续遍历)
 
 <!-- /TOC -->
 
@@ -39,7 +40,7 @@
 * [ES5-mirrorTree.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/mirrorTree.js)
 * [ES6-mirrorTree.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/mirrorTree.js)
 
-### 顺时针打印矩阵
+### 顺时针打印矩阵 / 画图具象问题
 
 需要考虑如果矩阵不规则不是正方形,情况比较复杂.将问题分解为两个步骤.
 
@@ -57,7 +58,7 @@
 * [ES5-matrixInCircle.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/matrixInCicle.js)
 * [ES6-matrixInCircle.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/matrixInCicle.js)
 
-### 得到堆栈min元素
+### 得到堆栈min元素 / 举例具象问题
 
 关键在于得到`min`的元素复杂度是`O(1)`. 很明显需要在每次`push or pop`的时候更新`min`.
 
@@ -117,3 +118,23 @@
 * [ES5-bfs.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/bfs.js)
 * [ES6-bfs.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/bfs.js)
 
+### 二叉搜索树的后续遍历
+
+[二叉搜索树维基百科定义](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%85%83%E6%90%9C%E5%B0%8B%E6%A8%B9) - 关键在于左边节点比中间节点大，右边节点比中间节点小。可以观察发现，左边树的所有数值都是比根节点小的。这对于所有树子结构都是成立的。
+
+[后续遍历](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%8F%89%E6%A0%91#%E5%89%8D(%E5%85%88)%E5%BA%8F%E3%80%81%E4%B8%AD%E5%BA%8F%E3%80%81%E5%BE%8C%E5%BA%8F%E9%81%8D%E6%AD%B7)的特点为：**根节点在三个节点中最后被访问**
+
+所以我们可以得到结论：
+
+1. 在整个遍历序列中，最最后一个为树根节点
+2. 通过根节点划分左右子树
+3. 对于两个划分子树，前面两点同样成立。同时判别是否 **二叉搜索树** 可以通过不断划分序列，找到 **最小树结构** 不断判断这些树结构来判断是否是二叉搜索树。
+
+**Python**
+
+* [Python-checkBST.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/Python/checkBST.py)
+
+**JavaScript**
+
+* [ES5-checkBST.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/checkBST.js)
+* [ES6-checkBST.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/checkBST.js)
