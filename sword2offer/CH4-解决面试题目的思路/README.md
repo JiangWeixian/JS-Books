@@ -11,6 +11,7 @@
     - [从上往下从左往右边打印二叉树](#从上往下从左往右边打印二叉树)
     - [二叉搜索树的后续遍历](#二叉搜索树的后续遍历)
     - [二叉树中和为某数值的路径](#二叉树中和为某数值的路径)
+    - [复杂链表赋值 / 分解让问题简单化](#复杂链表赋值--分解让问题简单化)
 
 <!-- /TOC -->
 
@@ -160,3 +161,37 @@
 
 * [ES5-findPath.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/findPath.js)
 * [ES6-findPath.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/findPath.js)
+
+### 复杂链表赋值 / 分解让问题简单化
+
+这部分以及下面几个问题说是体现了分治的思想，就这道题来说，并没有看出来。
+
+复杂链表如下：
+
+![什么是复杂链表]()
+
+1. **直观的** - 在不增加空间基础上，想要以更快的速度的复制，第一遍复制普通连接部分。第二遍复制跳跃连接部分，同时想要找到跳跃连接目标。就必须遍历整个链表
+2. **增加数据空间** - 在第一遍遍历的时候，就将跳跃连接部分以 **键值对形式保存起来**
+
+**文中方法**
+
+很巧妙，也没有额外空间
+
+1. 在每个节点后面增加克隆节点，相当于将克隆节点插入链表，克隆节点就在原始节点下一个。
+2. 然后跳跃连接克隆节点(**如果有跳跃连接的话**)，可以根据 **克隆节点就在原始节点下一个，且跳跃连接的克隆节点也在跳跃连接的原始节点后面** 原则找到。
+3. 然后断开原始节点和克隆节点就行。
+
+好处在于第一步和第二步都是`O(n)`复杂度的算法。
+
+![文中方法]()
+
+**Python**
+
+* [Python-copyComplexLinkedList.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/Python/cloneComplexLinkedList.py)
+
+**JavaScript**
+
+当你直接传递`head`进去的时候，设置`listB = xx`并不能改变`listB`。因为这属于覆盖，并不能改变引用。
+
+* [ES5-copyComplexLinkedList.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES5/copyComplexLinkedList.js)
+* [ES6-copyComplexLinkedList.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH4-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/ES6/copyComplexLinkedList.js)
