@@ -168,7 +168,7 @@
 
 复杂链表如下：
 
-![什么是复杂链表]()
+![什么是复杂链表](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/sword2offer/CH4-%E8%A7%A3%E5%86%B3%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE%E7%9A%84%E6%80%9D%E8%B7%AF/img/%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8.PNG)
 
 1. **直观的** - 在不增加空间基础上，想要以更快的速度的复制，第一遍复制普通连接部分。第二遍复制跳跃连接部分，同时想要找到跳跃连接目标。就必须遍历整个链表
 2. **增加数据空间** - 在第一遍遍历的时候，就将跳跃连接部分以 **键值对形式保存起来**
@@ -183,7 +183,7 @@
 
 好处在于第一步和第二步都是`O(n)`复杂度的算法。
 
-![文中方法]()
+![文中方法](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/sword2offer/CH4-%E8%A7%A3%E5%86%B3%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE%E7%9A%84%E6%80%9D%E8%B7%AF/img/%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E5%A4%8D%E5%88%B6.PNG)
 
 **Python**
 
