@@ -10,6 +10,7 @@
     - [O(1)方式删除某个节点](#o1方式删除某个节点)
     - [调整数组使得奇数在偶数前面](#调整数组使得奇数在偶数前面)
     - [链表到数K节点](#链表到数k节点)
+    - [反转链表](#反转链表)
     - [合并两个链表](#合并两个链表)
     - [判断子树](#判断子树)
 
@@ -108,6 +109,29 @@
 
 * [ES5-linkListLastK.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES5/linkedListLastK.js)
 * [ES6-linkListLastK.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES6/linkedListLastK.js)
+
+### 反转链表
+
+头指针变为尾指针。并返回一个新的链表。
+
+并没有选择文中思路。
+
+可以对比之前(也是文中题目)中[反转输出链表数值]()，同样也可以采取同样的思路，也就是递归方法。
+
+1. 先找到最后一个节点，返回
+2. 返回节点就是**当前节点的下一个节点**，因此我们就有了**下一个节点和当前节点**两个节点。
+3. 那么只要下一个节点`.next`变为**当前节点就能够达到目的**(原本是下一个节点`.next`是当前节点的下一个下一个节点)
+
+**注意原本的头节点(`head`)，在递归中是没有办法操作的。要在递归结束之后将`head.next`变为`null`**
+
+**Python**
+
+* [Python-reverseLinkedList.py](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/Python/reverseLinkedList.py)
+
+**JavaScript**
+
+* [ES5-reverseLinkedList.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES5/reverseLinkedList.js)
+* [ES6-reverseLinkedList.js](https://github.com/JiangWeixian/Algo/blob/master/Sword2offer/CH3-%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81/ES6/reverseLinkedList.js)
 
 ### 合并两个链表
 
