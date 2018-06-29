@@ -65,7 +65,7 @@ document.addEventLinster('click', function () {
 
 指的是`function (event) {}`中的`event`。而 **非IE浏览器的**`event`一般有以下属性：
 
-![event属性]()
+![event属性](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH13-DOM%E4%BA%8B%E4%BB%B6/img/%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7.PNG)
 
 所以可以通过判断`event`属性来判断事件是否支持冒泡。
 
@@ -74,7 +74,7 @@ document.addEventLinster('click', function () {
 
 而`IE`上的事件属性为:
 
-![ie-event属性]()
+![ie-event属性](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH13-DOM%E4%BA%8B%E4%BB%B6/img/ie%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7.PNG)
 
 **QA**
 
@@ -99,7 +99,9 @@ document.addEventLinster('click', function () {
 
 这里详细说明了不同类型事件以及特性，比如`click mouse etc..`，判断事件是否支持可以通过以下方式：
 
-![判断事件是否支持]()
+![判断事件是否支持](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH13-DOM%E4%BA%8B%E4%BB%B6/img/%E5%88%A4%E6%96%AD%E4%BA%8B%E4%BB%B6%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81.PNG)
+
+这里判读是否支持`focus`事件，类似还有`mouse`等。
 
 * UI事件 - 比如说`load resize scroll select etc`
   * load - 在页面一切都完毕之后加载，比如说`js css`等。还有一个`DOMContentLoaded`事件在页面`DOM`解析之后加载
