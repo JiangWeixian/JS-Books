@@ -5,7 +5,7 @@
 
 `script`标签和`css`一样的会阻塞`html`解析。（如果写在头部，会下载`script and css`然后再去解析`dom`）。因此和书写位置有关。
 
-* `defer or async` - [异步]()下载(这里异步说的是不会阻塞`html`解析)。两个还有小区别
+* `defer or async` - [异步](https://github.com/JiangWeixian/JS-Tips/blob/master/Grammar/JS-%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5.md)下载(这里异步说的是不会阻塞`html`解析)。两个还有小区别
   * `defer` - 解析`html`的时候，一起下载，同时`html`解析完毕之后，执行`js`
   * `async` - 解析`html`的时候，一起下载，下载完毕只有，执行`js`
 * src - 这个就没有不要写了
