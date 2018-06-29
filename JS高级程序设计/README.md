@@ -9,3 +9,4 @@
 * [CH6-面向对象](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1) / **继承和实例化的坑请注意**
 * [CH7-函数表达式](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH7-%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F)
 * [CH8-BOM](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH8-BOM)
+* [CH9-客户端检测](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH9-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B) / 检测什么类型客户端
