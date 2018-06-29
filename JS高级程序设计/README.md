@@ -8,4 +8,4 @@
 * [CH5-引用类型](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH5-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B)
 * [CH6-面向对象](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1) / **继承和实例化的坑请注意**
 * [CH7-函数表达式](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH7-%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F)
-* [CH8-BOM]()
+* [CH8-BOM](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH8-BOM)
