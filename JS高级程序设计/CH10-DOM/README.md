@@ -3,7 +3,7 @@
 
 ## DOM层次
 
-![dom层次]()
+![dom层次](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH10-DOM/img/%E8%8A%82%E7%82%B9%E5%B1%82%E6%AC%A1.png)
 
 上图可以看到很多`html`节点类型。
 
@@ -25,7 +25,7 @@
 
 而节点之间的关系还可以有
 
-![节点之间关系]()
+![节点之间关系](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH10-DOM/img/%E8%8A%82%E7%82%B9%E4%B9%8B%E9%97%B4%E5%85%B3%E7%B3%BB.png)
 
 以上可以通过节点属性来获取具有以上关系的节点。
 
