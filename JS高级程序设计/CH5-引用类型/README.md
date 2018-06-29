@@ -59,7 +59,7 @@
 
 **得到一个结果是什么意思需要理解一下！**
 
-![exec]()
+![exec](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH5-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/img/exec.png)
 
 整个`//`内的为一个结果，以`matches[0]`查看。
 
