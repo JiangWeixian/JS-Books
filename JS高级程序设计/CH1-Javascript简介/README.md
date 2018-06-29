@@ -14,11 +14,11 @@
 
 关系如下：
 
-![浏览器组成]()
+![浏览器组成](https://raw.githubusercontent.com/JiangWeixian/JS-Tips/master/Broswer/img/Browser-dom%26bom%26js.png)
 
 ### DOM级别 
 
-1. `DOM1`级别 - `DOM`核心和`DOM-HTML`。可以参考理解[这篇文章-关于HTML和SGML继承关系]()，可以说这个级别的，定义的就是这种关系。
+1. `DOM1`级别 - `DOM`核心和`DOM-HTML`。可以参考理解[这篇文章-关于HTML和SGML继承关系](https://github.com/JiangWeixian/JS-Tips/blob/master/HTML/HTML-DOCTYPE.md)，可以说这个级别的，定义的就是这种关系。
 2. `DOM2`级别 - 视图、事件、样式、遍历和范围
 3. `DOM3`级别 - (留空，不是很能理解)
 
