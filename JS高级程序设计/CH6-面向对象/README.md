@@ -19,7 +19,7 @@
 
 ## 理解`实例和prototype` - 很重要
 
-如何继承就不说明，请看[继承方法-总结]()，这里再说明 **实例和原型的区别！！**
+如何继承就不说明，请看[继承方法-总结](https://github.com/JiangWeixian/JS-Tips/blob/master/Grammar/JS-%E7%BB%A7%E6%89%BF.md)，这里再说明 **实例和原型的区别！！**
 
 首先我们定义`person`，然后在`person.prototype`上面定义方法，如：
 
@@ -65,7 +65,7 @@ var person2 = new Person()
   student2.name.push('bnine')
   ```
 
-  可以发现`student1.name`其实变为了`['anike', 'bnike']`。这是由于`Person.prototype`是被共享的。可以看[__proto__和prototype总结]()中的指向图。
+  可以发现`student1.name`其实变为了`['anike', 'bnike']`。这是由于`Person.prototype`是被共享的。可以看[__proto__和prototype总结](https://github.com/JiangWeixian/JS-Tips/blob/master/Grammar/JS-__proto__%26%26prototype%26%26new.md)中的指向图。
 
   可以参考[stack.js]()中私有属性的写法，**这样属性就不会共享在`prototype`就没有问题！
 
@@ -116,7 +116,7 @@ student2.name.push('bnine')
 
   原因在于`new`的时候改变了`constructor`的`this`指向(没有`new`是修改不了，也访问不来，这是`this`的特性)，分别是`student1`和`student2`。但是没有办法处理`Person.prototype.name = []`这样的情况。
 
-  还可以通过`call`这个方法调用父类的方法，见[继承方法-总结]()。
+  还可以通过`call`这个方法调用父类的方法，见[调用父类方法](https://github.com/JiangWeixian/JS-Tips/blob/master/Grammar/JS-%E7%BB%A7%E6%89%BF.md)。
 
 2. 或者直接通过`es6 class`
 
