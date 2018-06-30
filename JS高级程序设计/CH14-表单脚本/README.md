@@ -27,7 +27,7 @@
 
 ### 表单属性
 
-![表单属性]()
+![表单属性](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH14-%E8%A1%A8%E5%8D%95%E8%84%9A%E6%9C%AC/img/%E8%A1%A8%E5%8D%95%E5%B1%9E%E6%80%A7.PNG)
 
 * 其中控件指的就是`input`此类元素
 
@@ -51,7 +51,7 @@
 
 每个控件都会有的属性。
 
-![共享字段]()
+![共享字段](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH14-%E8%A1%A8%E5%8D%95%E8%84%9A%E6%9C%AC/img/%E5%85%B1%E4%BA%AB%E5%AD%97%E6%AE%B5.PNG)
 
 意味着 **可以**在`html`阶段指定。
 
