@@ -17,4 +17,6 @@
 * [CH14-表单脚本](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH14-%E8%A1%A8%E5%8D%95%E8%84%9A%E6%9C%AC)
 * [CH15-canvas]() / 这部分就先跳过了
 * [CH16-HTML5脚本编程](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH16-HTML5%E8%84%9A%E6%9C%AC%E7%BC%96%E7%A8%8B) / 知道新特性新方法，用的时候不慌
-* [CH17-错误处理方式]()
+* [CH17-错误处理方式](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH17-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F)
+* [CH18-XML]() / 关于浏览器如何处理XML, 好像很少用到。跳过...
+* [CH18-E4X]() / 这个对我来说，用到的时候就更少了
