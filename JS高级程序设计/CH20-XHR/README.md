@@ -18,7 +18,7 @@
 
 ## 前置 - 如何使用
 
-简单说明见[ajax-前世今生]()
+简单说明见[ajax-前世今生](https://github.com/JiangWeixian/JS-Tips/blob/master/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/AJAX-%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F%E8%A7%A3%E6%83%91.md)
 
 如果是`post`最后要有`send`发送数据，如果是`get`那么就不需要`send`
 
@@ -110,7 +110,7 @@ post比较复制一些，因为发生数据的不同。常规的分为：
 
 ## comet
 
-[轮询，长轮询技术]()。
+[轮询，长轮询技术](https://github.com/JiangWeixian/JS-Tips/blob/master/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/TCP%2BUDP%2BHTTP%2B%E8%BD%AE%E8%AF%A2%2BWebsocket.md)。
 
 以及在以上两个基础上实现`sse`技术。
 
