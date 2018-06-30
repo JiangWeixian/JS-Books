@@ -16,4 +16,4 @@
 * [CH13-DOM事件](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH13-DOM%E4%BA%8B%E4%BB%B6)
 * [CH14-表单脚本](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH14-%E8%A1%A8%E5%8D%95%E8%84%9A%E6%9C%AC)
 * [CH15-canvas]() / 这部分就先跳过了
-* [CH16-HTML5脚本编程]() / 知道新特性新方法，用的时候不慌
+* [CH16-HTML5脚本编程](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH16-HTML5%E8%84%9A%E6%9C%AC%E7%BC%96%E7%A8%8B) / 知道新特性新方法，用的时候不慌
