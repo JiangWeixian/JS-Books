@@ -1,6 +1,20 @@
 # 高级技巧
 > 主要线程和事件队列，哪个好好看好好学
 
+<!-- TOC -->
+
+- [高级技巧](#高级技巧)
+  - [类型检测](#类型检测)
+  - [安全的构造函数](#安全的构造函数)
+  - [及时的`return`](#及时的return)
+  - [函数绑定](#函数绑定)
+  - [冻结对象](#冻结对象)
+  - [主线程和事件队列](#主线程和事件队列)
+  - [元素拖拽](#元素拖拽)
+  - [自定义事件](#自定义事件)
+
+<!-- /TOC -->
+
 ## 类型检测
 
 指的是原生类型检查。
@@ -13,7 +27,7 @@
 
 ## 安全的构造函数
 
-在之前[构造对象的章节]()中
+在之前[构造对象的章节](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1)中
 
 ```JavaScript
 function Person () {
@@ -122,7 +136,7 @@ setTimeout
 
 1. 说明了回调优先级别是第二。
 
-而事件队列函数之间的优先级见[链接]()，截取其中代码：
+而事件队列函数之间的优先级见[链接](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1)，截取其中代码：
 
 ```JavaScript
 console.log('script start');
@@ -141,3 +155,13 @@ console.log('script end');
 ```
 
 console.log是主线程，而`promise`和`setimeout`是事件队列，可以发现`promise`优先级比较高。
+
+## 元素拖拽
+
+倒不是说这个方法多么难以实现。
+
+就是这个封装在 **同一个函数内部**的想法是值得学习的。
+
+## 自定义事件
+
+用到的就是发布订阅的方法。
