@@ -24,4 +24,4 @@
 * [CH20-AJAX](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH20-XHR)
 * [CH21-高级技巧](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH21-%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7)
 * [CH22-离线应用和客户端存储](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH22-%E7%A6%BB%E7%BA%BF%E5%BA%94%E7%94%A8%E5%92%8C%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%BC%93%E5%AD%98) / cookie or indexDB
-* [CH23-可维护代码]()
+* [CH23-可维护代码](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH23-%E5%8F%AF%E7%BB%B4%E6%8A%A4%E4%BB%A3%E7%A0%81)
