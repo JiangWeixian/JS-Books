@@ -22,4 +22,4 @@
 * [CH18-E4X]() / 这个对我来说，用到的时候就更少了
 * [CH19-JSON](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH18-JSON) / 补充了细节
 * [CH20-AJAX](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH20-XHR)
-* [CH21-高级技巧]()
+* [CH21-高级技巧](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH21-%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7)
