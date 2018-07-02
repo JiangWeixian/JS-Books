@@ -67,7 +67,9 @@ var person2 = new Person()
 
   可以发现`student1.name`其实变为了`['anike', 'bnike']`。这是由于`Person.prototype`是被共享的。可以看[__proto__和prototype总结](https://github.com/JiangWeixian/JS-Tips/blob/master/Grammar/JS-__proto__%26%26prototype%26%26new.md)中的指向图。
 
-  可以参考[stack.js]()中私有属性的写法，**这样属性就不会共享在`prototype`就没有问题！
+  但是如果在`push`之前添加`student1.name = [] and student2.name = []`是不会有问题的。因为这里再自身添加了`name`属性，不会再去`Person.prototype`上寻找这个方法。
+
+  可以参考[stack.js](https://github.com/JiangWeixian/JS-Books/blob/master/JS%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%A0%88/stack.js)中私有属性的写法，**这样属性就不会共享在`prototype`就没有问题！
 
 ## 继承的坑
   
@@ -90,6 +92,29 @@ student2.name.push('bnine')
 ```
 
 可以发现`student1.name`其实变为了`['anike', 'bnike']`。这是由于`student.prototype`是被共享的。
+
+这个问题仍旧存在以下问题上：
+
+```JavaScript
+var person = {
+  name: [],
+  say: function () {
+    console.log(this.name)
+  }
+}
+
+// 继承
+var Student = Object.create(person)
+Student.show = function () {
+  console.log('student', this.name)
+}
+
+// 类似于创建实例
+var s1 = Object.create(Student)
+var s2 = Object.create(Student)
+s1.name.push('s1')
+s2.name.push('s2')
+```
 
 
 **如何修改这个问题？**
@@ -138,12 +163,37 @@ student2.name.push('bnine')
   node2.child.push('node2')
   ```
 
-**文中Object.create()在我实践看来并不行。**
+**文中Object.create()在我实践看来并不行。指的是`Person.prototype.name = []`情况下的`push`。**
+
+但是`Object.create`有优势所在，因为`student.prototype = new Person()`继承的时候调用了一次`Person`，初始化`student`的时候又调用了一遍`Person`。如果使用`student.prototype = Object.create(Person.prototype)`
 
 ### 最佳实践
 
 1. 如果是`function`(`constructor + prototype`)的方式，那么属性写在`constructor`内部，通过`call`来实现继承。
 
 2. 或者使用`class`
+
+3. 使用以下方式 - 保留`Object.create`优点，并用`init`代替了`constructor`的作用。
+  ```JavaScript
+  var person = {
+    init: function () {
+      this.name = []
+    }
+  }
+
+  // 继承
+  var Student = Object.create(person)
+  Student.init = function () {
+    person.init.call(this)
+  }
+  
+  // 类似于创建实例
+  var s1 = Object.create(Student)
+  var s2 = Object.create(Student)
+  s1.init()
+  s2.init()
+  s1.name.push('s1')
+  s2.name.push('s2')
+  ```
   
 
