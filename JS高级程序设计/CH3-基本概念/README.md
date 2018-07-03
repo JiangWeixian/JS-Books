@@ -16,6 +16,7 @@
     - [Object](#object)
   - [操作符](#操作符)
     - [++a和a++ - 多么痛的领悟](#a和a---多么痛的领悟)
+    - [+a和a + b](#a和a--b)
     - [!](#)
     - [&& or ||](#-or-)
     - [关系运算符 - > or >=](#关系运算符----or-)
@@ -65,9 +66,13 @@
 
 ### Number(**)需要注意的
 
-如果是`boolean`就是`0 or 1`简单转换关系。
+1. 如果是`boolean`就是`0 or 1`简单转换关系。
 
-优先调用`valueof`，如果数值是`NaN`。那么再调用`toString->valueof`。
+2. 优先调用`valueof`，如果数值是`NaN`。那么再调用`toString->valueof`。
+
+3. 调用了`valueof`如果得到对象，那么再调用`toString->valueof`。
+
+情况在于如果第2步和第3步`valueof`结果为`string`，那么就根据`string`和`number`之间得转换规则来。`string`能转换为数字就为数字，不能得就变为`NaN`
 
 #### NaN - 属于Number
 
@@ -108,6 +113,27 @@
 **注意**
 
 `++`或者其他设计类型转换的 **操作符号**，优先调用`valueof`；如果不存在`valueof`或者`valueof`的返回数值是`NaN`的话，那么就先调用`toString`，然后调用`valueOf`
+
+### +a和a + b
+
+如果出现`var num = +a`仅仅只有这样，遵循`Number`转换规则
+
+**a + b**
+
+情况特别复杂。首先我们要知道`+`支持得是`string`相加。
+
+1. 优先对两个进行`valueof`，如果得到结果是字符串或者数字，就停止
+2. 如果有一个为`obj(array之类的)`或者`NaN`，那么就对其进行`toString->valueof`
+
+但是问题会出现在`[]+{} and {}+[]`上面。
+
+第一个结果为`[object object]`，第二个为0。再[youdontkonwjs有解释](https://github.com/getify/You-Dont-Know-JS/blob/1ed-zh-CN/types%20%26%20grammar/ch5.md)
+
+从左到右边解析，第一个就是总结转换规则。
+
+但是第二个，由于遇到了`{}`(**关键在于它是空得，且直接写出**)，所以 **它是解析为代码段，类似于function那里的{}**。所以第二个就变为了`+[]`。所以就是`+`得转换规则。
+
+如果想要避免这个情况，可以设置一个`num={}`，然后在进行`num+[]`，这样结果就不是`0`
 
 ### !
 
