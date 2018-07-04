@@ -12,7 +12,7 @@
 
 原文如下：
 
-![css-url]()
+![css-url](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E5%8D%95%E4%BD%8D/img/cssurl.PNG)
 
 指的是`@import url(..)`其中`..`使用相对路径的情况下：
 
