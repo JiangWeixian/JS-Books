@@ -8,6 +8,7 @@
   - [水平格式化 - auto导致宽度变化](#水平格式化---auto导致宽度变化)
   - [高度格式化](#高度格式化)
     - [外边距合并](#外边距合并)
+  - [line-height于vertical-align](#line-height于vertical-align)
 
 <!-- /TOC -->
 
@@ -46,3 +47,5 @@ width = 400 - 0(margin-right) - (-40)(margin-left)
 
 * 两个正数
 * 一个正数另外一个负数 - 正的减去负的绝对值
+
+## line-height于vertical-align
