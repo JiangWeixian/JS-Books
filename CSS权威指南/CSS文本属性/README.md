@@ -16,7 +16,7 @@
 
 首先要记住下面这张图，理解其他文本属性很重要
 
-![line-height]()
+![line-height](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/img/lineheight.PNG)
 
 ## text-indent - 缩进
 
@@ -34,7 +34,7 @@
 
 **只能够是行内元素**，所有属性如下图所示：
 
-![verticalalign]()
+![verticalalign](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/img/verticalalign.PNG)
 
 * baseline - 是对于基线而言
 * bottom - 是针对文本框下边界而言
@@ -46,7 +46,7 @@
 
 字体和字体之间本来就有的空白不算，这里的处理指的是原本只有一个空格，现在却有两个。如下图所示：
 
-![处理空白和黄行]()
+![处理空白和黄行](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/img/whitespace.PNG)
 
 
 ## 比较少用到的，但是很有用
