@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>浮动元素测试</title>
+    <style>
+      .test-float {
+        width: 400px;
+        height: 400px;
+        border: 1px solid red;
+      }
+      .test__ele {
+        width: 100px;
+        height: 20px;
+        background-color: blue;
+      }
+      .float {
+        float: left;
+        background-color: red;
+      }
+      .test__ele--bigchild {
+        width: 420px;
+        height: 120px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test-float test-flaot--content">
+      <div class="test__ele float"></div>dsdsadsadsads
+    </div>
+    <div class="test-float test-float--bigchild">
+      <div class="test__ele--bigchild float"></div>
+    </div>
+  </body>
+</html>
