@@ -18,7 +18,7 @@
 ## 前置知识 - 对于CSS而言的元素分类
 
 * 块元素
-* 行内元素 - 无法设置`width height margin`，但是可以有`padding border`
+* 行内元素 - 无法设置`width height`，但是可以有` margin padding border`
 * 替换元素 - 替换元素指的是是否包括内容，例如`<p></p>`和`<p>xx</p>`就是替换元素和非替换元素
 * 非替换元素 - 元素含有内容
 
