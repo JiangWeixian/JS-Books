@@ -24,7 +24,7 @@
 
 规范中规定的几个字体系列，如下：
 
-![字体系列]()
+![字体系列](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E5%AD%97%E4%BD%93/img/%E5%AD%97%E4%BD%93%E7%B3%BB%E5%88%97.PNG)
 
 **某个具体字体，类如`roboto`** 两者之间关系就是包含于被包含关系，就像是字体系列就可以包含很多具体字体。
 
@@ -47,7 +47,7 @@
 
 ## 全部设置
 
-![fontcss]()
+![fontcss](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E5%AD%97%E4%BD%93/img/fontcss.PNG)
 
 ## 加粗
 
