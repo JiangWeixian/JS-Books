@@ -22,23 +22,23 @@
 
 浮动虽然会脱离文档流，但是还是会对其他元素造成影响。这里讨论是 **其他元素指的是和他同级别的元素，而不是其父类元素。**
 
-* 如果同级别元素是文本节点，如[float.html-test-float--content]()。那么文本就会围绕着`float`元素
+* 如果同级别元素是文本节点，如[float.html-test-float--content](https://github.com/JiangWeixian/JS-Books/blob/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E6%B5%AE%E5%8A%A8/float.html)。那么文本就会围绕着`float`元素
 * 如果同级别元素是元素节点(且没有设置float)，则会重叠。**会在浮动元素下面，且元素背景在浮动元素下面，但是字体在上面**
 
 ### 1.1.2. float规则
 
-一些原则可以在[bfc]()中得到解释。这里简单总结一部分
+一些原则可以在[bfc](https://github.com/JiangWeixian/JS-Tips/blob/master/CSS/css-bfc.md)中得到解释。这里简单总结一部分
 
-1. float元素会和父类边界重叠，至于那一边取决于向哪一边浮动。一般来说元素不会超过父类元素边界，但是如果 **浮动元素过大，或者设置了marigin为负数就会出现超出的情况**，如[float.html--test__ele--bigchild]()所示。
+1. float元素会和父类边界重叠，至于那一边取决于向哪一边浮动。一般来说元素不会超过父类元素边界，但是如果 **浮动元素过大，或者设置了marigin为负数就会出现超出的情况**，如[float.html--test__ele--bigchild](https://github.com/JiangWeixian/JS-Books/blob/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E6%B5%AE%E5%8A%A8/float.html)所示。
 
 **多个float元素**
 
-2. 都是同一个方向 - [bfc规则]()，边界相邻的靠在一行，如果一行长度超过了父类设置的宽度，那么就会换行。
+2. 都是同一个方向 - [bfc规则](https://github.com/JiangWeixian/JS-Tips/blob/master/CSS/css-bfc.md)，边界相邻的靠在一行，如果一行长度超过了父类设置的宽度，那么就会换行。
 3. 不同方向 - 两个不同方向浮动，如果太长那么就会换行
 
 ### 1.1.3. 清除浮动
 
-我使用得是`clear: both`这个方案，见[clear.html]()
+我使用得是`clear: both`这个方案，见[clear.html](https://github.com/JiangWeixian/JS-Tips/blob/master/Demos/clearfloat.html)
 
 ## 1.2. 定位
 
@@ -102,17 +102,17 @@
 
 * 例子1 - `left+right+width=12`，所以重置`marigin`两边为`6`
 
-    ![margin-atuo]()
+    ![margin-atuo](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E6%B5%AE%E5%8A%A8/img/%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E8%AE%A1%E7%AE%97%E8%A7%84%E5%88%99.PNG)
 
 * 优先重置`right`
 
-    ![优先重置right]()
+    ![优先重置right](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E6%B5%AE%E5%8A%A8/img/%E4%BC%98%E5%85%88%E9%87%8D%E7%BD%AEright.PNG)
 
 **甚至可以垂直居中**
 
 * 垂直居中例子
 
-    ![垂直居中例子]()
+    ![垂直居中例子](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E6%B5%AE%E5%8A%A8/img/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD.PNG)
 
 ### 1.2.4. clip
 
