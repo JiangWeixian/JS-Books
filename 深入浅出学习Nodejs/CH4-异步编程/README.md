@@ -25,7 +25,7 @@
 
 ## 1.2. 发布订阅模式
 
-在[app.js]()中比较了发布订阅和未使用发布订阅的情况。
+在[app.js](https://github.com/JiangWeixian/JS-Books/tree/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E5%AD%A6%E4%B9%A0Nodejs/CH4-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B)中比较了发布订阅和未使用发布订阅的情况。
 
 **未使用发布订阅的时候**
 
