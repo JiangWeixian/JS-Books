@@ -79,7 +79,7 @@ var after = (times, callback) {
 
 其中提到了`.next()`函数实现的方式很有意思。如：
 
-![next]()
+![next](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E5%AD%A6%E4%B9%A0Nodejs/CH4-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/img/next.PNG)
 
 * `.handle` - 没有意外
 * `.next` - 和`handle`是递归调用的过程
