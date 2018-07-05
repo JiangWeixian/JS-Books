@@ -16,7 +16,7 @@
 
 **伪类元素`content`内容**
 
-![content]()
+![content](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E5%88%97%E8%A1%A8%E5%92%8C%E7%94%9F%E6%88%90%E5%86%85%E5%AE%B9/img/%E7%94%9F%E6%88%90%E5%86%85%E5%AE%B9.PNG)
 
 注意可以设置普通`string`之外。其他可选值得注意：
 
@@ -33,7 +33,7 @@
 
 前两个数声明(在第一次声明的时候)计数器(计数器的名字随意指定)，最后一个使用计数器。具体例子如下：
 
-![counter]()
+![counter](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E5%88%97%E8%A1%A8%E5%92%8C%E7%94%9F%E6%88%90%E5%86%85%E5%AE%B9/img/%E8%AE%A1%E6%95%B0%E5%99%A8.PNG)
 
 * `conuter`接受两个参数，第一个为声明的计数器。后面参数可以不写，如果不写就从1开始计数。**可以传递list-style**然后根据`list-style`开始计数。
 
