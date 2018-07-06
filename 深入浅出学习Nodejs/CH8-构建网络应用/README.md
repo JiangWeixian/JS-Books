@@ -29,7 +29,7 @@
 
 ## 1.2. cookie
 
-关于[cookie]()介绍，在JS高级程序设计已经解释过了。
+关于[cookie](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/CH22-%E7%A6%BB%E7%BA%BF%E5%BA%94%E7%94%A8%E5%92%8C%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%BC%93%E5%AD%98)介绍，在JS高级程序设计已经解释过了。
 
 * 服务器通过`set-cookie`来设置客户端`cookie`。但是 **客户端可以供过`document.cookie`来设置，最好通过设置`httponly`来限制`document.cookie`无法使用**。客户端是通过`secure`的`cookie`字段。
 
@@ -47,7 +47,7 @@ cookie和session成对出现。
 
 设置方法如下：
 
-![sessionincookie]()
+![sessionincookie](https://raw.githubusercontent.com/JiangWeixian/JS-Books/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E5%AD%A6%E4%B9%A0Nodejs/CH8-%E6%9E%84%E5%BB%BA%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/img/%E8%AE%BE%E7%BD%AEcookie%E4%B8%8A%E7%9A%84sessionid.PNG)
 
 ### 1.3.1. 字符串查询
 
@@ -61,7 +61,7 @@ session一般存储在`redis`上面，一般和`session`的存储服务保持很
 
 ## 1.4. 安全
 
-具体可见[xss-csrf]()分析。
+具体可见[xss-csrf](https://github.com/JiangWeixian/JS-Tips/blob/master/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/xss%2Bcsrf.md)分析。
 
 ### 1.4.1. XSS
 
@@ -97,7 +97,7 @@ session一般存储在`redis`上面，一般和`session`的存储服务保持很
 
 ## 1.6. 性能
 
-关于这部分，我之前总结过[一篇文章]() - 前三个客户端/服务器都能够设置，后面两个服务器设置，然后客户端再下一次请求的时候发送。
+关于这部分，我之前总结过[一篇文章](https://github.com/JiangWeixian/JS-Tips/blob/master/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/HTTP-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md) - 前三个客户端/服务器都能够设置，后面两个服务器设置，然后客户端再下一次请求的时候发送。
 
 文中提到的最佳实践和总结的一样，设置一个永远不会到期的时间，然后通过服务器控制 **文件名**来实现客户端更新。
 
