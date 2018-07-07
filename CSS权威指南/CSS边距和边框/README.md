@@ -19,7 +19,16 @@ IE盒子模型和W3C盒子模型。整个`box`占用宽高计算方式一致(pad
 * IE盒子模型(border-box) - 如果定义了宽高，那么内容区域就是(定义高度 - padding - border)。
 * W3C盒子模型(content-box) - 如果定义了宽高，就是定义了内容区域高度
 
+所以特别区分两个个概念，**盒子模型，内容区域**
+
+* 内容区域是我们看到的元素高度，`+margin`才是盒子模型。
+* 盒子模型(=width+margin+padding+border)影响布局，影响父类高度。
+
+一种特别情况在于marigin是一个负数，padding时一个正数，互相抵消，两个的绝对值特别大。就会出现一种情况，元素的宽高看起来特别大，但是由于`margin+padding=0`，所以其实这两个不会影响父类的宽高。
+
 ## margin&padding
+
+两个都会对布局发生影响，但是可视化来说(能够呈现内容的)只有`padding`。在[CSS表现](https://github.com/JiangWeixian/JS-Books/tree/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/CSS%E5%9F%BA%E6%9C%AC%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96)也提到了`margin or padding width`对父类的影响，特别是父类没有设置高度的情况下。三者相加等于父类高度或者宽度。
 
 和在一起说明，以下提到的对两者都成立。
 
