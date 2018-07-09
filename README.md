@@ -11,6 +11,7 @@
   * [📕 JS高级程序设计](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1) / 红宝书
   * [📕 JS语言精粹](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E8%AF%AD%E8%A8%80%E7%B2%BE%E7%B2%B9)
   * [📕 CSS权威指南](https://github.com/JiangWeixian/JS-Books/tree/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97)
+  * [📖 ES6入门]() / 无论如何都要系统看一遍，有一些细节的东西
   * [📖 JS异步编程]() / 有种让你觉得很厉害的感觉
   * [📖 Nodejs深入浅出](https://github.com/JiangWeixian/JS-Books/tree/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E5%AD%A6%E4%B9%A0Nodejs) / 属于进阶版本，留个未完待续的坑
   * [📖 Sword2Offer](https://github.com/JiangWeixian/JS-Books/tree/master/sword2offer) / JS实现版本
