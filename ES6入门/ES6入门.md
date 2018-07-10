@@ -20,3 +20,4 @@
 * [CH01 - ES6简介]() / 基本概念解惑
 * [CH02 - let&const]() / 块与let&const&function
 * [CH03 - 解构析构]() / 不仅仅是{}
+* [CH04 - String](http://es6.ruanyifeng.com/#docs/string)
