@@ -31,7 +31,7 @@
 * undefined - `null == undefined`为`true`
 * number
 * string
-* function
+* **function**
 * object
 * boolean
 
@@ -62,7 +62,7 @@
 
 ### Boolean(**)需要注意的
 
-如果通过`Boolean(**)`来得到`true or false`，那么就要涉及到`falsy or truthy`的列表数值。
+如果通过`Boolean(**)`来得到`true or false`，那么就要涉及到[falsy or truthy](https://github.com/JiangWeixian/JS-Tips/blob/master/Grammar/JS-falsy%26turthy.md)的列表数值。
 
 ### Number(**)需要注意的
 
@@ -143,13 +143,15 @@
 
 ### !
 
-`if (xx) or if (!xx)`都是 **Boolean(xx)需要注意的**所提到的转换规则。
+`if (xx) or if (!xx)`都是 **Boolean(xx)**所提到的转换规则。
 
 ### && or ||
 
 注意这两个返回结果并不是`false or true`。而是类似三元运算符的操作。
 
 ### 关系运算符 - > or >=
+
+> 如果经过了一次转换之后，还是不同的类型。就要继续实践转换规则。
 
 这个操作符的返回结果是`true or false`。
 
@@ -163,7 +165,7 @@
 
 #### == - 需要转换为数值类型比较
 
-这个转换规则也有点不同,**前提是设计到了转换。**
+> 这个转换规则也有点不同，**前提是设计到了转换。** 如果经过了一次转换之后，还是不同的类型。就要继续实践转换规则。
 
 **对于字符串和Boolean**，转换规则和`Number`中提到的一致
 

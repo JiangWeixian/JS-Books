@@ -44,7 +44,7 @@ var person2 = new Person()
 
   但是如果`person1.name = 'adidas'`那么可以在`person1`上面找到这个`name`属性。因为当我们`person1.name`的时候，先寻找自身，因为已经找到了，所以就不会继续向上面寻找。**只是在自身定义同名属性，并不是覆盖父类**
 
-  * 可以通过`hasOwnProperty`来寻找`name`，**但是只会寻找自身。**`Object`上有很多类似的方法，含有`prototype`关键字的一般都会往`Person`上寻找。
+  * 可以通过`hasOwnProperty`来寻找`name`，**但是只会寻找自身，注意不能查找的是方法。** `Object`上有很多类似的方法，含有`prototype`关键字的一般都会往`Person`上寻找。
   * `in`关键字是会往`Person`上面寻找。
   * `Object.keys()`只会在`person1`上面寻找
 
