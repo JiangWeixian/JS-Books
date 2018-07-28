@@ -6,6 +6,7 @@
 <!-- TOC -->
 
 - [JS - 基本概念](#js---基本概念)
+  - [规则](#规则)
   - [typeof](#typeof)
   - [类型](#类型)
     - [Boolean(**)需要注意的](#boolean需要注意的)
@@ -22,8 +23,15 @@
     - [关系运算符 - > or >=](#关系运算符----or-)
       - [== - 需要转换为数值类型比较](#---需要转换为数值类型比较)
       - [对象 == 对象](#对象--对象)
+  - [关于`undefined and null`](#关于undefined-and-null)
 
 <!-- /TOC -->
+
+## 规则
+
+以下每个分支都是规则。说几个没有提及的：
+
+1. `==`中的类型转换，存在`boolean->number or string->number`。但是不存在`some->boolean->number`，只有`some->string->number`。**转换为number，对象类型必须经过`string`步骤。**
 
 ## typeof
 
@@ -190,3 +198,9 @@
     var b = new Number(2)
     a == b // false
     ```
+
+## 关于`undefined and null`
+
+1. 转换为`boolean`为`0`
+2. 转换为`string`分别为`'undefined' and 'null'`
+3. 转换为`number`，由第2点可以得到，两个都是`NaN`
