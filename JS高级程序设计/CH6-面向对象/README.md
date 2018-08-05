@@ -54,7 +54,7 @@ var person2 = new Person()
 
   ```JavaScript
   function Person () {
-    // this.name = [] 写在这里也一样。
+    // this.name = [] 写在这里不会发现以下情况，因为new关键字会重新分配this
   }
   Person.prototype.name = []
   Person.prototype.age = 29
