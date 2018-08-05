@@ -7,11 +7,13 @@
   - [1.2. 解构 - []](#12-解构---)
     - [1.2.1. 特殊情况](#121-特殊情况)
   - [1.3. 解构 - {}](#13-解构---)
-    - [1.3.1. 特殊应用](#131-特殊应用)
+    - [1.3.1. 特殊应用 - `{}`解构的是对象](#131-特殊应用---解构的是对象)
   - [1.4. 解构 - 字符串](#14-解构---字符串)
-  - [1.5. 解构 - 函数参数](#15-解构---函数参数)
-  - [for...of](#forof)
-  - [应用](#应用)
+  - [1.5. `...`](#15-)
+  - [1.6. 解构 - 函数参数](#16-解构---函数参数)
+    - [1.6.1. 函数参数与`...`](#161-函数参数与)
+  - [1.7. for...of](#17-forof)
+  - [1.8. 应用](#18-应用)
 
 <!-- /TOC -->
 
@@ -79,7 +81,7 @@ let {x, y, z} = {x: 1, y: 2}
 * 同样可以使用默认数值。
 * 可以解构json
 
-### 1.3.1. 特殊应用
+### 1.3.1. 特殊应用 - `{}`解构的是对象
 
 如果`{}`解构的是属性，那么应该不仅仅局限于`{x: 1, y: [1, 2]}`的数据。任何含有属性数据的数据都可以，**这一点在导入模块已经体现了**
 
@@ -94,7 +96,68 @@ let {call: raw_fn} = Function
 
 既有数组特性以及对象特性，{} or []都可以！
 
-## 1.5. 解构 - 函数参数
+## 1.5. `...`
+
+> 不幸的是，在[@2018-08-05]()的时候。浏览器还没有很好的支持，所以必须借助`babel`。由于在`vue&react`第三方框架中大量的使用到了。所以还是有必要学习的。
+
+> 
+
+在解释函数参数之前，还有一个`...`在解构析构中意味着`rest`，也就是剩余部分。举例来说为：
+
+```JavaScript
+let arr = [1, 2, 3]
+let [x, ...y] = arr
+console.log(x, y)
+```
+
+`y`就可以得到`[2, 3]`也就是剩余部分。如果是对于解构`{}`。
+
+```JavaScript
+let obj = {name: 'eric', job: 'frontend', age: '21'}
+let {name, ...yo} = obj
+console.log(name, yo)
+```
+
+`name`依旧还是遵循解构`obj`时候的规则，和其中`key`值对应。`...yo`就获取`obj`剩余部分。**此时是`yo`是一个对象。**
+
+**题外话 - 灵活的应用**
+
+```JavaScript
+let arr = [1, 2, 3]
+let a = [...arr]
+console.log(a)
+```
+
+我们得到的`a`是`arr`的复制，而且是 **深度复制的结果**。进一步我们可以利用这个添加新的元素。
+
+```JavaScript
+let arr = [1, 2, 3]
+let a = [...arr, 4]
+console.log(a)
+```
+
+这样我们可以得到一个`[1, 2, 3, 4]`。因此我们可以得到一个结论是`...arr`其实是 **展开了其中的`value`，而外部包裹的`[]`才会让最终结果变为`array`**
+
+对于`{}`也有类似的效果:
+
+```JavaScript
+let obj = {name: 'eric', job: 'frontend', age: '21'}
+let newobj = {...obj, name: 'newerci'}
+console.log(newobj)
+```
+
+由于`obj`展开之后已经有`name`，所以最后我们得到`{name: "newerci", job: "frontend", age: "21"}`。**name被新来的覆盖了。这里准寻一个先来后到的次序。**
+
+```JavaScript
+let obj = {name: 'eric', job: 'frontend', age: '21'}
+let newobj = {name: 'newerci', ...obj}
+console.log(newobj)
+// 结果就是{name: 'eric', job: 'frontend', age: '21'}
+```
+
+**在函数里面用到会比较奇怪一些。**
+
+## 1.6. 解构 - 函数参数
 
 * [] or {} 都是支持 - []
 * 要明白函数参数的解构析构做了怎样的操作 - 
@@ -116,11 +179,102 @@ let {call: raw_fn} = Function
 
 依据上面的规则，如果传入`[]`或者`[1]`，两个的表现是不一样的。
 
-## for...of
+**题外话**
+
+不过一般来说都是解构的`{}`，例如`function show({name, job})`。和数组一样，传入的参数也是通过`{name, job}=传入的参数`。
+
+函数默认参数也 **倾向于`function show({name='eric', job='frontend'})`**
+
+### 1.6.1. 函数参数与`...`
+
+> 重点在于列出所有情况
+
+> 在函数中，`...`最为重要的作用是深度复制对象
+
+`...`对于函数的作用，一个正在大家广泛使用的小技巧是。`var a = [...arr]`赋值一个数组，而且 **并不是指向同一个引用地址的数组。**，类似的也就是说：
+
+```JavaScript
+let obj = {name: 'eric', job: 'frontend', age: '21'}
+let {...yo} = obj
+console.log(yo)
+```
+
+`yo`复制了`obj`，且是一个新的对象。类似还有[1.5. `...`](#15-)里面的用法。
+
+1. `function (...args)`
+
+    ```JavaScript
+    var show = function (...args) {
+      console.log(args, Object.prototype.toString.call(args))
+    }
+
+    show(obj)
+    // 得到args其实是一个数组 
+    ```
+    
+    此处其实有点奇怪的，首先由[1.6. 解构 - 函数参数](#16-解构---函数参数)得到结论，上面的操作其实`...args = obj`。**但是如果直接`let ...args = obj`这样的写法是不支持的，所以这个方式的解构析构需要特别注意。**
+
+2. `function (args)`传入`{...obj}`
+
+    ```JavaScript
+    // 得到args就是obj的一个深度复制
+    var show = function (args) {
+      console.log(args, Object.prototype.toString.call(args))
+    }
+
+    show({...obj})
+    ```
+
+    解构析构的规则是`args = {...obj}`
+
+3. `function ({name, age, job})`传入`{...obj}`
+
+    ```JavaScript
+    // 得到args就是obj的一个深度复制
+    var show = function ({name, age, job}) {
+      console.log(name, job, age)
+    }
+
+    show({...obj})
+    ```
+
+    解构析构的规则是`{name, age, job} = {...obj}`
+
+到目前位置一切都还是很正常的，以下情况相对复杂一些。
+
+4. `function ({name}, {color})`传入`{...obj}, {...obj2}`
+
+    ```JavaScript
+    let obj = {name: 'eric', job: 'frontend', age: '21'}
+    let color = {color: 'blue'}
+    var show = function ({name}, {color}) {
+      console.log('多个解构析构', name, color)
+    }
+
+    show({...obj}, {...color})
+    ```
+
+    相对好理解，两个解构析构表达式当然是需要两个对象的传递。
+
+5. 如果是常规参数和，解构析构表达式共同使用的话
+
+    ```JavaScript
+    let obj = {name: 'eric', job: 'frontend', age: '21'}
+    let color = {color: 'blue'}
+    var show = function (name, {color}) {
+      console.log('多个解构析构', name, color)
+    }
+
+    show({...obj}, {...color})
+    ```
+
+    按照参数传递的顺序，`name`得到`obj`，而后面则进行正常的解构析构。
+
+## 1.7. for...of
 
 支持解构析构的都支持`for of`
 
-## 应用
+## 1.8. 应用
 
 * 获取函数返回数值就不说了
 * **交换数值**
