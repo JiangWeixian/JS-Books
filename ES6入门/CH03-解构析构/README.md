@@ -270,7 +270,7 @@ console.log(yo)
 
     按照参数传递的顺序，`name`得到`obj`，而后面则进行正常的解构析构。
 
-所有测试案例见[解构析构.html]()
+所有测试案例见[解构析构.html](https://github.com/JiangWeixian/JS-Books/blob/master/ES6%E5%85%A5%E9%97%A8/CH03-%E8%A7%A3%E6%9E%84%E6%9E%90%E6%9E%84/%E8%A7%A3%E6%9E%84%E6%9E%90%E6%9E%84.html)
 
 ## 1.7. for...of
 
