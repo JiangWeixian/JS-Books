@@ -201,7 +201,7 @@ console.log(yo)
 
 `yo`复制了`obj`，且是一个新的对象。类似还有[1.5. `...`](#15-)里面的用法。
 
-1. `function (...args)`
+1. `function (...args)` - **代替`Array.prototype.concat.apply([], arguments)`**
 
     ```JavaScript
     var show = function (...args) {
@@ -209,10 +209,15 @@ console.log(yo)
     }
 
     show(obj)
-    // 得到args其实是一个数组 
+    // 得到args其实是一个数组，结果为[{name: 'eric', job: 'frontend', age: '21'}]
     ```
     
     此处其实有点奇怪的，首先由[1.6. 解构 - 函数参数](#16-解构---函数参数)得到结论，上面的操作其实`...args = obj`。**但是如果直接`let ...args = obj`这样的写法是不支持的，所以这个方式的解构析构需要特别注意。**
+
+    该方法会将所有传入改函数的参数`push`到一个数组中。
+    
+    * 如果传`show([1,2], [1, 2])`，`args`将会是`[[1,2], [2, 3]]`
+    * 如果是`show([[1,2], [1, 2]])`，`args`将会是`[[[1,2], [2, 3]]]`
 
 2. `function (args)`传入`{...obj}`
 

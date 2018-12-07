@@ -32,6 +32,13 @@
 
     show(obj)
 
+    var show = function (...args) {
+      console.log('传入多个参数')
+      console.log(args, Object.prototype.toString.call(args))
+    }
+
+    show([[1, 2], [2, 3]])
+
     var show = function ({name, age, job}) {
       console.log(name, job, age)
     }
