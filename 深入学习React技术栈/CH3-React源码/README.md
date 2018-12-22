@@ -20,7 +20,7 @@
 
 > 不过如果你在`rerender`阶段的钩子函数里面调用`setstate`(除了`receiveprops`函数)，那么可能会可能会导致循环消耗内存。
 
-**在其余钩子函数里面调用`setstate`可能会引起循环的更新。**原因是因为`willmount receiveprops`两个钩子函数的调用`setstate`会合并`state`。
+**在其余钩子函数里面调用`setstate`可能会引起循环的更新。** 原因是因为`willmount receiveprops`两个钩子函数的调用`setstate`会合并`state`。
 
 ## setstate
 
