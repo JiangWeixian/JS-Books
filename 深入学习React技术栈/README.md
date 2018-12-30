@@ -11,7 +11,8 @@
 
 * [CH3-React源码]() / 生命周期详解
 * [CH4-Flux]() / Flux不会局限框架，Vue也是能够使用的
-* [CH4-React-redux]() / 不同于Flux，契合React的框架 
+* [CH5-React-redux]() / 不同于Flux，契合React的框架
+* [CH6-高阶redux]() / 创造同一种类型的reducer, 以及对`reducer`进行增强.
 
 ## UNREAD
 > 没有阅读以及没有仔细阅读的

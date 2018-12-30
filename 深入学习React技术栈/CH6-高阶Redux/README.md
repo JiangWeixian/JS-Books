@@ -55,3 +55,70 @@ store里面的数据是存储了一份，但是如果存储的数据其中一部
 **Batch actions**
 
 批量触发actions的优化。的确是有这样的需求。
+
+之所以能够发生这样的优化,应该就是因为`batch actions`不同于多个`action`同时触发. 
+
+1. 多个`action`同时触发, 会多次修改`reduce`, 每一次都会同步到`state`
+2. 如果`batch action`, 多次修改之后, 再一同同步到`state`
+
+**原理!**(其实很简单, 观察[redux-batched-actions](https://github.com/tshelburne/redux-batched-actions/blob/master/src/index.js))
+
+观察`batch-redux`原理.
+
+```js
+
+export const BATCH = 'BATCHING_REDUCER.BATCH';
+
+export function batchActions(actions, type = BATCH) {
+	return {type, meta: { batch: true }, payload: actions}
+}
+
+export function enableBatching(reduce) {
+	return function batchingReducer(state, action) {
+		if (action && action.meta && action.meta.batch) {
+			return action.payload.reduce(batchingReducer, state);
+		}
+		return reduce(state, action);
+	}
+}
+```
+
+* batchactions - 是用来触发`actions`, 参数就是`actions`数组
+* enablebatching - 很重要, 也很简单
+
+    > 一般来说`reducer`是`enablebatching`内部的那个函数. 接受`state action`
+
+    但是这里有一个`reduce`函数进行包裹 目的是为了什么?
+
+    也就是说传统的`reducer`都需要通过`enablebatching`的函数进行包裹, **这很关键.**
+    
+    > **那么, 在不满足`if`条件的时候, 这其实就是一个普通的`reducer`函数**
+
+    > 如果是`batch actions`触发的, 那么就是执行的是`if`里面的语句. 那么根据`array.reduce`函数的特点, 会在数组执行完毕之后, 统一返回执行的结果. 那么就不会发生 **传递一次action, 更新一次state** 而是多次`action` 才会更新一次`state`.
+
+    **记住`enablebatching`传递的是`reduce`**, 是高阶`reducer`的一种, 对`reduce`进行提高.
+    
+
+## 解读`redux`以及`react-redux`
+
+1. `initstate`以及`reducer`
+
+`initstate`决定了`state`拥有怎样的数据, `reducer`通过`action`来更新数据(是一个数据更新的集合), `store`的名字是通过`reducer`决定的.
+
+> `reducer`决定`store`拥有怎样的数据这种说法是不对的. 而是`reducer`返回的结果决定了`store`拥有怎样的数据才对
+
+`createstore`通过标题两者构造`store`
+
+2. 数据监听
+
+其实是`redux-subscribe`的作用, 而`connect`就是帮我们做了这件事情.
+
+同时如果`state`不传递`mapstate2props`的话, 其实组件是不会`subsribe store`的数据的.
+
+3. dispatch
+
+为了避免陷入死循环. 其实在`dispatch action`的时候, 会进行判断当前是不是进行一次`dispatch action`(明显的单线程判断)
+
+此时在这个阶段就会发生`store`根据`action`来更新数据.
+
+更新完成之后, 在`connect`阶段组件作为默认的订阅者就会触发更新.
