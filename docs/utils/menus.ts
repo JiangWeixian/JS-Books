@@ -52,5 +52,3 @@ export const getMenus = (): Menus => {
   })
   return menus
 }
-
-console.log(getMenus())

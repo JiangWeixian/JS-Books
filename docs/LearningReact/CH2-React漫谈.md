@@ -1,11 +1,13 @@
 # 漫谈React
 > 与CSS结合的最佳实践；性能优化
 
+[[toc]]
+
 ## 前言
 
 知识点很多。
 
-## **Event System**
+## Event System
 
 1. React中事件不能等价与原生事件系统
 
@@ -17,18 +19,18 @@
 
   > 如果是原生和`React`混用的情况，如果**阻止了React事件冒泡不能够阻止原生事件冒泡。但是如果阻止了原生的，就一定会阻止`React`的**
 
-## **几个概念**
+## 几个概念
 
 什么时候受控模式？什么时候非受控模式？
 
 > 无论是原生组件还是还是非原生组件。组件的数据是通过`state or props`进行控制的。而非受控的模式是通过**原生`DOM`的方式进行控制的**
 
 
-## **With CSS-Modules**
+## With CSS-Modules
 
 具体见[CSS-modules](https://github.com/JiangWeixian/JS-Tips/blob/master/React/React-CSSModules.md)这部分的总结
 
-## **Commuication**
+## Commuication
 
 父子通信是比较明白的。兄弟之间通信也能够实现。只要数据在父级处理然后分发就可以了。
 
@@ -36,7 +38,7 @@
 
 文中推荐了`events`通过`pub/sub`的方式。需要`events`这个`npm`包。**并不十分推荐`context`这个属性。**
 
-## **HOC**
+## HOC
 
 > HOC的作用需要好好研究一下
 
@@ -62,7 +64,7 @@
   可以看到被返回的组件是继承的是`wrappedcomponent`。意味着再内部我们可以通过`wrappedComponent.state or .props`来访问到一些数据，从而对`wrappedcomponents`进行控制。
 
 
-## **Optimize React**
+## Optimize React
 
 > 优化React。其中有些实现可能不需要通过插件的方式了，集成为了现有的API。
 
@@ -89,7 +91,7 @@
 
 2. 使用对象变量，如果我们给对象设置`props`为`<div style={ { width: 'xpx' } }></div>`，那么每次`render`之后`style`得到对象都应该是新创建的。性能消耗是比较大的。
 
-  > 我们能进行的优化是，将{{ width: 'xpx' }}这部分数据保存为到一个变量里面。
+  > 我们能进行的优化是，将{ width: 'xpx' }这部分数据保存为到一个变量里面。
 
 3. `shouldcomponentupdate` - 要学会使用这个钩子还是。
 

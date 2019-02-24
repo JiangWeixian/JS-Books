@@ -54,4 +54,3 @@ exports.getMenus = function () {
     });
     return menus;
 };
-console.log(exports.getMenus());

@@ -1,6 +1,7 @@
 import { getMenus } from '../utils/menus'
 import { repo } from '../config'
-const slug = require('markdown-slug')
+
+console.log(getMenus())
 
 module.exports = {
   title: 'JS-Books',
@@ -23,9 +24,6 @@ module.exports = {
     }
   },
   markdown: {
-    slugify: (e: any) => {
-      return slug(e)
-    },
     config: (md: any) => {
       md.use(require('markdown-it-task-checkbox'))
     }

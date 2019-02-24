@@ -13,7 +13,7 @@ var __assign = (this && this.__assign) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var menus_1 = require("../utils/menus");
 var config_1 = require("../config");
-var slug = require('markdown-slug');
+console.log(menus_1.getMenus());
 module.exports = {
     title: 'JS-Books',
     description: '书籍是人类进步的阶梯',
@@ -32,9 +32,6 @@ module.exports = {
             ] })
     },
     markdown: {
-        slugify: function (e) {
-            return slug(e);
-        },
         config: function (md) {
             md.use(require('markdown-it-task-checkbox'));
         }
