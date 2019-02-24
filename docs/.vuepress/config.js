@@ -12,15 +12,24 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var menus_1 = require("../utils/menus");
+var config_1 = require("../config");
 var slug = require('markdown-slug');
 module.exports = {
     title: 'JS-Books',
     description: '书籍是人类进步的阶梯',
+    base: "/" + config_1.repo + "/",
     head: [
         ['link', { rel: 'icon', href: '/favicon.png', type: 'image/x-icon' }],
     ],
     themeConfig: {
-        sidebar: __assign({}, menus_1.getMenus())
+        nav: [
+            { text: '主页', link: '/' },
+            { text: '目录', link: '/Menus/' },
+            { text: 'Github', link: 'https://github.com/JiangWeixian/JS-Books/' },
+        ],
+        sidebar: __assign({}, menus_1.getMenus(), { '/Menus/': [
+                '',
+            ] })
     },
     markdown: {
         slugify: function (e) {

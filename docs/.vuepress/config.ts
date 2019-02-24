@@ -1,21 +1,25 @@
 import { getMenus } from '../utils/menus'
+import { repo } from '../config'
 const slug = require('markdown-slug')
 
 module.exports = {
   title: 'JS-Books',
   description: '书籍是人类进步的阶梯',
+  base: `/${repo}/`,
   head: [
     [ 'link', { rel: 'icon', href: '/favicon.png', type: 'image/x-icon' } ],
   ],
-  nav: [
-    { text: '主页', link: '/' },
-    { text: '技术栈', link: '/Guide/' },
-    { text: '目录', link: '/Menus/' },
-    { text: 'Github', link: 'https://github.com/JiangWeixian/JS-Books/' },
-  ],
   themeConfig: {
+    nav: [
+      { text: '主页', link: '/' },
+      { text: '目录', link: '/Menus/' },
+      { text: 'Github', link: 'https://github.com/JiangWeixian/JS-Books/' },
+    ],
     sidebar: {
       ...getMenus(),
+      '/Menus/': [
+        '',
+      ]
     }
   },
   markdown: {
