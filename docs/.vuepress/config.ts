@@ -18,6 +18,11 @@ module.exports = {
     ],
     sidebar: {
       ...getMenus(),
+      // '/JSDataStructureAndAlgo/': [
+      //   '',
+      //   '基础',
+      //   '队列/queue'
+      // ],
       '/Menus/': [
         '',
       ]

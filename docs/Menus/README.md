@@ -12,7 +12,7 @@ Enjoy it!
 * [JQuery](/JQuery/)
 * [JSAdvancedProgramming](/JSAdvancedProgramming/)
 * [JSAnimationDesign](/JSAnimationDesign/)
-* [JSDataStructureAndAlgorithm](/JSDataStructureAndAlgorithm/)
+* [JSDataStructureAndAlgo](/JSDataStructureAndAlgo/)
 * [JSDesgin-Patterns](/JSDesgin-Patterns/)
 * [JSLanguageEssence](/JSLanguageEssence/)
 * [LearningNodejs](/LearningNodejs/)

@@ -27,7 +27,13 @@ module.exports = {
             { text: '目录', link: '/Menus/' },
             { text: 'Github', link: 'https://github.com/JiangWeixian/JS-Books/' },
         ],
-        sidebar: __assign({}, menus_1.getMenus(), { '/Menus/': [
+        sidebar: __assign({}, menus_1.getMenus(), { 
+            // '/JSDataStructureAndAlgo/': [
+            //   '',
+            //   '基础',
+            //   '队列/queue'
+            // ],
+            '/Menus/': [
                 '',
             ] })
     },

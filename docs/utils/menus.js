@@ -12,19 +12,18 @@ var formater_1 = require("./formater");
 var fs = __importStar(require("fs"));
 var path = __importStar(require("path"));
 var isEmpty = require('lodash/isEmpty');
-exports.getChildMenus = function (dirPath) {
+exports.getChildMenus = function (dirPath, prefix) {
     var menus = [];
     var _files = fs
         .readdirSync(dirPath);
     _files.forEach(function (e) {
         if (utils_1.isDirectory(dirPath + "/" + e) && e !== 'node_modules') {
-            menus = menus.concat(exports.getChildMenus(dirPath + "/" + e));
+            menus = menus.concat(exports.getChildMenus(dirPath + "/" + e, prefix + "/" + e));
         }
         else {
             var isVaild = utils_1.isMdFiles(e) && e !== 'README.md';
             isVaild && formater_1.amendPathName([e], dirPath);
-            var dirFolder = path.basename(dirPath);
-            isVaild && menus.push(dirFolder + "/" + e.slice(0, e.length - 3).trim());
+            isVaild && menus.push(prefix + "/" + e.slice(0, e.length - 3).trim());
         }
     });
     return menus;
@@ -45,7 +44,7 @@ exports.getMenus = function () {
         if (!isEmpty(_folders)) {
             var childMenus_1 = [];
             _folders.forEach(function (e) {
-                childMenus_1 = childMenus_1.concat(exports.getChildMenus(dirpath + "/" + e));
+                childMenus_1 = childMenus_1.concat(exports.getChildMenus(dirpath + "/" + e, e));
             });
             if (!isEmpty(childMenus_1)) {
                 menus[formater_1.createRouterUrl(_folderName)] = _files.concat(childMenus_1);

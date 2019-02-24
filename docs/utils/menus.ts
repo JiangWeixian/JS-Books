@@ -5,18 +5,17 @@ import * as path from 'path'
 
 const isEmpty = require('lodash/isEmpty')
 
-export const getChildMenus = (dirPath: string) => {
+export const getChildMenus = (dirPath: string, prefix: string) => {
   let menus: string[] = []
   let _files = fs
       .readdirSync(dirPath)
   _files.forEach(e => {
     if (isDirectory(`${dirPath}/${e}`) && e !== 'node_modules') {
-      menus = menus.concat(getChildMenus(`${dirPath}/${e}`))
+      menus = menus.concat(getChildMenus(`${dirPath}/${e}`, `${prefix}/${e}`))
     } else {
       const isVaild = isMdFiles(e) && e !== 'README.md'
       isVaild && amendPathName([ e ], dirPath)
-      const dirFolder = path.basename(dirPath)
-      isVaild && menus.push(`${dirFolder}/${e.slice(0, e.length - 3).trim()}`)
+      isVaild && menus.push(`${prefix}/${e.slice(0, e.length - 3).trim()}`)
     }
   })
   return menus
@@ -43,7 +42,7 @@ export const getMenus = (): Menus => {
     if (!isEmpty(_folders)) {
       let childMenus: string[] = []
       _folders.forEach(e => {
-        childMenus = childMenus.concat(getChildMenus(`${dirpath}/${e}`))
+        childMenus = childMenus.concat(getChildMenus(`${dirpath}/${e}`, e))
       })
       if (!isEmpty(childMenus)) {
         menus[createRouterUrl(_folderName)] = _files.concat(childMenus)
