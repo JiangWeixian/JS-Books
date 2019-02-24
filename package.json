@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "prebuild": "tsc -p tsconfig.json",
+    "prebuild": "tsc -p tsconfig.json && node docs/.vuepress/config.js",
     "dev": "npx vuepress dev docs",
     "build": "npx vuepress build docs"
   },
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@types/node": "^11.9.5",
+    "lodash": "^4.17.11",
     "typescript": "^3.3.3333"
   }
 }

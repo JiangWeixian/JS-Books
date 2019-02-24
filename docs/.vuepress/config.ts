@@ -1,3 +1,4 @@
+import { getMenus } from '../utils/menus'
 const slug = require('markdown-slug')
 
 module.exports = {
@@ -6,20 +7,20 @@ module.exports = {
   head: [
     [ 'link', { rel: 'icon', href: '/favicon.png', type: 'image/x-icon' } ],
   ],
+  nav: [
+    { text: '主页', link: '/' },
+    { text: '技术栈', link: '/Guide/' },
+    { text: '目录', link: '/Menus/' },
+    { text: 'Github', link: 'https://github.com/JiangWeixian/JS-Books/' },
+  ],
   themeConfig: {
     sidebar: {
-      '/CSS2/': [
-        '',
-        'guide',
-        'CSS单位/CSS单位',
-        'CSS列表和生成内容/',
-      ],
+      ...getMenus(),
     }
   },
   markdown: {
     slugify: (e: any) => {
       return slug(e)
-      console.info(slug(e))
     },
     config: (md: any) => {
       md.use(require('markdown-it-task-checkbox'))
