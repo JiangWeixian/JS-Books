@@ -1,0 +1,30 @@
+{
+  "name": "js-books",
+  "version": "1.0.0",
+  "description": "js-books",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JiangWeixian/JS-Books.git"
+  },
+  "keywords": [
+    "js",
+    "books"
+  ],
+  "author": "JW",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JiangWeixian/JS-Books/issues"
+  },
+  "homepage": "https://github.com/JiangWeixian/JS-Books#readme",
+  "dependencies": {
+    "vuepress": "^0.14.9"
+  },
+  "devDependencies": {
+    "@types/node": "^11.9.5",
+    "typescript": "^3.3.3333"
+  }
+}
