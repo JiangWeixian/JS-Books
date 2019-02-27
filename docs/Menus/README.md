@@ -4,7 +4,6 @@ Enjoy it!
 :::
 
 * [CSSAuthoritativeGuide](/CSSAuthoritativeGuide/)
-* [CSSMagic](/CSSMagic/)
 * [GettingStartedWithES6](/GettingStartedWithES6/)
 * [GettingStartedWithGo](/GettingStartedWithGo/)
 * [IntroductionToAlgorithms](/IntroductionToAlgorithms/)
