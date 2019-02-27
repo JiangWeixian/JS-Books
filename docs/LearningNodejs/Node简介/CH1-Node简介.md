@@ -1,4 +1,4 @@
-# 1. CH1-Node.js简介
+# CH1-Node.js简介
 
 <!-- TOC -->
 

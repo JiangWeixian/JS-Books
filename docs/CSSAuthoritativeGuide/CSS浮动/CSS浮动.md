@@ -1,4 +1,4 @@
-# 1. CSS浮动以及定位
+# CSS浮动以及定位
 > float&position
 
 <!-- TOC -->
