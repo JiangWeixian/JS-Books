@@ -3,7 +3,7 @@
 
 ## **生命周期**
 
-![生命周期](https://raw.githubusercontent.com/JiangWeixian/JS-Books/DeepInReact/%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0React%E6%8A%80%E6%9C%AF%E6%A0%88/CH3-React%E6%BA%90%E7%A0%81/img/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png)
+![生命周期](./img/lifecircle.png)
 
 可以将生命周期分为两个阶段，分别是`mount`以及`re-render`阶段。
 
@@ -20,7 +20,7 @@
 
 > 不过如果你在`rerender`阶段的钩子函数里面调用`setstate`(除了`receiveprops`函数)，那么可能会可能会导致循环消耗内存。
 
-**在其余钩子函数里面调用`setstate`可能会引起循环的更新。** 原因是因为`willmount receiveprops`两个钩子函数的调用`setstate`会合并`state`。
+**在其余钩子函数里面调用`setstate`可能会引起循环的更新。** 原因是因为 **`willmount receiveprops`** 两个钩子函数的调用`setstate`会合并`state`。
 
 ## setstate
 

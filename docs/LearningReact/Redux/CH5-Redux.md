@@ -1,5 +1,7 @@
-# CH5 - react-redux
+# react-redux
 > flux on react = react-redux
+
+[[toc]]
 
 ## 数据流动
 

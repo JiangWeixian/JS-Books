@@ -1,4 +1,4 @@
-# CH3-Flux
+# Flux
 > flux其实就是store部分的内容。它解决了什么内容。
 
 ## 前言
