@@ -13,7 +13,6 @@ var __assign = (this && this.__assign) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var menus_1 = require("../utils/menus");
 var config_1 = require("../config");
-console.log(menus_1.getMenus());
 module.exports = {
     title: 'JS-Books',
     description: '书籍是人类进步的阶梯',
@@ -27,13 +26,7 @@ module.exports = {
             { text: '目录', link: '/Menus/' },
             { text: 'Github', link: 'https://github.com/JiangWeixian/JS-Books/' },
         ],
-        sidebar: __assign({}, menus_1.getMenus(), { 
-            // '/JSDataStructureAndAlgo/': [
-            //   '',
-            //   '基础',
-            //   '队列/queue'
-            // ],
-            '/Menus/': [
+        sidebar: __assign({}, menus_1.getMenus(), { '/Menus/': [
                 '',
             ] })
     },

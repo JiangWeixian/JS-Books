@@ -1,4 +1,4 @@
-# 1. let&const
+# let&const
 > 不要停留在表面
 
 <!-- TOC -->

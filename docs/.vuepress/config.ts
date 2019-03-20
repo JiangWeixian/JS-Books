@@ -1,8 +1,6 @@
 import { getMenus } from '../utils/menus'
 import { repo } from '../config'
 
-console.log(getMenus())
-
 module.exports = {
   title: 'JS-Books',
   description: '书籍是人类进步的阶梯',
@@ -18,11 +16,6 @@ module.exports = {
     ],
     sidebar: {
       ...getMenus(),
-      // '/JSDataStructureAndAlgo/': [
-      //   '',
-      //   '基础',
-      //   '队列/queue'
-      // ],
       '/Menus/': [
         '',
       ]
