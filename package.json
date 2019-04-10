@@ -6,7 +6,7 @@
   "scripts": {
     "test": "test",
     "prebuild": "tsc -p tsconfig.json && node docs/Menus/index.js && node docs/.vuepress/config.js",
-    "dev": "npx vuepress dev docs",
+    "dev": "npm run prebuild && npx vuepress dev docs",
     "build": "npx vuepress build docs"
   },
   "repository": {

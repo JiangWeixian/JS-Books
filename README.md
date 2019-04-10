@@ -11,6 +11,7 @@
 * [📕 JS语言精粹](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E8%AF%AD%E8%A8%80%E7%B2%BE%E7%B2%B9)
 * [📕 CSS权威指南](https://github.com/JiangWeixian/JS-Books/tree/master/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97)
 * [📕 JS动画设计](https://github.com/JiangWeixian/JS-Books/tree/master/JS%E5%8A%A8%E7%94%BB%E8%AE%BE%E8%AE%A1) / `Velocity.js`作者出品
+* [📕 React源码阅读]()
 
   > 两个星：大部分内容都是和`Velocity`这个库有关。参考价值不是很大（要学习不如直接看文档`DOC`）。
   
