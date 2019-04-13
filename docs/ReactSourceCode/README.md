@@ -5,6 +5,10 @@
 论如何成为一个React Coder
 :::
 
+:::warning
+阅读的时候React version为16.8.6
+:::
+
 ## Refs
 
 * [React15源码阅读](https://github.com/numbbbbb/read-react-source-code)
