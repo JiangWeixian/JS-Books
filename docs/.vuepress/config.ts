@@ -19,7 +19,8 @@ module.exports = {
       '/Menus/': [
         '',
       ]
-    }
+    },
+    lastUpdated: 'Last Updated', // string | boolean
   },
   markdown: {
     config: (md: any) => {
