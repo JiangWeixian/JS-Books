@@ -40,6 +40,15 @@
 * `memo` - `react.memo`
 * `./forwardRef`<Badge text="高级功能" /> <Badge text="需要理解" />
 * `./withComponentStack`<Badge text="不曾使用" />
+* `jsx`相关 - 在`js files`解析`html tag`。一直在使用，但是从来没有想过.
+  * 存在`validator`版本，当版本为`dev`的时候开启
+
+内部一共做了几件事情
+
+1. 导入不同内置包，并且聚合导出。同时做到了第二点
+2. 区分`dev or prod`导出不同内置包
+
+至于对应内置包理解，要看`packages/react`对应文件夹
 
 ## 题外话
 
