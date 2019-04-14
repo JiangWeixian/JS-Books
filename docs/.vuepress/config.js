@@ -28,7 +28,8 @@ module.exports = {
         ],
         sidebar: __assign({}, menus_1.getMenus(), { '/Menus/': [
                 '',
-            ] })
+            ] }),
+        lastUpdated: 'Last Updated',
     },
     markdown: {
         config: function (md) {
